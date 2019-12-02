@@ -10,27 +10,31 @@ npm i --save-dev @whitespace/storybook-addon-html
 
 ### Register addon
 
-Create a file called `addons.js` in your Storybook config and add the following content:
+Create a file called `addons.js` inside the `.storybook` directory and add the following content:
 
 ```js
+// .storybook/addons.js
+
 import '@whitespace/storybook-addon-html/register';
 ```
 
 ## Usage
 
-Add `withHTML` as a global decorator inside `config.js`
+Add `withHTML` as a global decorator inside `.storybook/config.js`:
 
 ```js
-// config.js
+// .storybook/config.js
+
 import { addDecorator } from '@storybook/html';
 import { withHTML } from '@whitespace/storybook-addon-html';
 addDecorator(withHTML);
 ```
 
-The HTML is formatted with Prettier. You can override the Prettier config (except `parser` and `plugins`) by providing an object following the [Prettier API override format](https://prettier.io/docs/en/options.html).
+The HTML is formatted with Prettier. You can override the Prettier config (except `parser` and `plugins`) by providing an object following the [Prettier API override format](https://prettier.io/docs/en/options.html):
 
 ```js
-// config.js
+// .storybook/config.js
+
 import { addDecorator } from '@storybook/html';
 import { withHTML } from '@whitespace/storybook-addon-html';
 addDecorator(
