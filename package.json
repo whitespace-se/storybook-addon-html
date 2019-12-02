@@ -5,8 +5,7 @@
   "keywords": [
     "addon",
     "storybook",
-    "html",
-    "source"
+    "html"
   ],
   "repository": {
     "type": "git",
