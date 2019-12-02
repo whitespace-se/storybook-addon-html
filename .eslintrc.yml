@@ -1,0 +1,14 @@
+root: true
+plugins:
+  - react
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+parser: babel-eslint
+env:
+  browser: true
+  es6: true
+  node: true
+rules:
+  react/display-name: 0
+  react/prop-types: 0
