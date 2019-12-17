@@ -1,15 +1,5 @@
-import { addons, makeDecorator } from '@storybook/addons';
+export * from './decorators/html';
 
-import { EVENT_CODE_RECEIVED } from './shared';
-
-export const withHTML = makeDecorator({
-  name: 'withHTML',
-  parameterName: 'html',
-  skipIfNoParametersOrOptions: false,
-  wrapper: (getStory, context, { options = {} }) => {
-    const channel = addons.getChannel();
-    const htmlMarkup = getStory(context);
-    channel.emit(EVENT_CODE_RECEIVED, { html: htmlMarkup, options });
-    return htmlMarkup;
-  },
-});
+console.warn(
+  'Importing the withHTML decorator from @whitespace/storybook-addon-html is deprecated. Import from @whitespace/storybook-addon-html/[framework] instead. Using the deprecated path will result in @whitespace/storybook-addon-html/html being used.',
+);
