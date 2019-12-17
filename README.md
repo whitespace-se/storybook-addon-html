@@ -28,7 +28,7 @@ Add `withHTML` as a global decorator inside `.storybook/config.js`:
 // .storybook/config.js
 
 import { addDecorator } from '@storybook/html';
-import { withHTML } from '@whitespace/storybook-addon-html';
+import { withHTML } from '@whitespace/storybook-addon-html/react';
 
 addDecorator(withHTML);
 ```
@@ -41,7 +41,7 @@ The HTML is formatted with Prettier. You can override the Prettier config
 // .storybook/config.js
 
 import { addDecorator } from '@storybook/html';
-import { withHTML } from '@whitespace/storybook-addon-html';
+import { withHTML } from '@whitespace/storybook-addon-html/react';
 
 addDecorator(
   withHTML({
@@ -53,3 +53,12 @@ addDecorator(
   }),
 );
 ```
+
+## Supported frameworks
+
+When importing the decorator, use the correct path for your framework, e.g. `@whitespace/storybook-addon-html/react` for React or `@whitespace/storybook-addon-html/html` for HTML.
+
+Right now, the addon can be used with these frameworks:
+
+- HTML
+- React
