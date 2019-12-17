@@ -1,0 +1,23 @@
+{
+  "name": "@whitespace/storybook-addon-html-example-react",
+  "version": "1.0.0",
+  "description": "Example of a Storybook app using @whitespace/storybook-addon-html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@whitespace/storybook-addon-html": "^1.1.0",
+    "babel-loader": "^8.0.6"
+  }
+}
