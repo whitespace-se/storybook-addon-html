@@ -19,7 +19,6 @@ const HTMLPanel = () => {
         parser: 'html',
         plugins: [prettierHtml],
       };
-      console.log(prettierConfig, options);
       const code = prettierFormat(html, prettierConfig);
       setState(code);
     },
