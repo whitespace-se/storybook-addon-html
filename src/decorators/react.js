@@ -7,7 +7,7 @@ const Wrapper = ({ setCode, children }) => {
   let wrapperRef = React.createRef();
   useEffect(() => {
     setCode(wrapperRef.current.innerHTML);
-  }, []);
+  });
   return <div ref={wrapperRef}>{children}</div>;
 };
 
