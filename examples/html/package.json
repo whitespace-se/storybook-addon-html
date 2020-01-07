@@ -13,8 +13,9 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.7.5",
+    "@storybook/addon-knobs": "^5.2.8",
     "@storybook/html": "^5.2.8",
-    "@whitespace/storybook-addon-html": "^1.1.0",
+    "@whitespace/storybook-addon-html": "^1.2.0",
     "babel-loader": "^8.0.6"
   }
 }
