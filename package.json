@@ -12,10 +12,10 @@
     "url": "https://github.com/whitespace-se/storybook-addon-html.git"
   },
   "scripts": {
-    "build": "npm run clean & babel -d ./lib ./src",
+    "build": "yarn clean & babel -d ./lib ./src",
     "build:watch": "babel --watch -d ./lib ./src",
     "clean": "rm -rf ./lib",
-    "prepare": "npm run build",
+    "prepare": "yarn build",
     "prettier": "prettier --write '**/*.{js,json,md,yml}'"
   },
   "author": "Whitespace",
