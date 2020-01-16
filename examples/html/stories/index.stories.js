@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs/html';
 
 export default {
@@ -11,7 +12,7 @@ export const button = () => {
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.innerText = 'Hello Button';
-  btn.addEventListener('click', e => console.log(e));
+  btn.addEventListener('click', action('clicked'));
   return btn;
 };
 
@@ -19,6 +20,6 @@ export const buttonWithKnobs = () => {
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.innerText = text('Label', 'Custom label');
-  btn.addEventListener('click', e => console.log(e));
+  btn.addEventListener('click', action('clicked'));
   return btn;
 };
