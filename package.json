@@ -21,27 +21,27 @@
   "author": "Whitespace",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.7.0",
-    "@babel/core": "^7.1.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/preset-react": "^7.0.0",
-    "@storybook/react": "^5.1.11",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@storybook/react": "^5.3.4",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.6.0",
-    "eslint-plugin-react": "^7.16.0",
-    "react": "^16.3.2"
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.0",
+    "react": "^16.12.0"
   },
   "dependencies": {
-    "@babel/generator": "^7.7.2",
-    "@babel/parser": "^7.7.3",
-    "@storybook/addons": "^5.2.8",
-    "@storybook/api": "^5.2.8",
-    "@storybook/components": "^5.2.8",
+    "@babel/generator": "^7.8.3",
+    "@babel/parser": "^7.8.3",
+    "@storybook/addons": "^5.3.4",
+    "@storybook/api": "^5.3.4",
+    "@storybook/components": "^5.3.4",
     "estraverse": "^4.3.0",
     "prettier": "^1.19.1",
-    "prismjs": "^1.15.0",
-    "react-syntax-highlighter": "^11.0.2"
+    "prismjs": "^1.19.0",
+    "react-syntax-highlighter": "^12.2.1"
   },
   "publishConfig": {
     "access": "public"

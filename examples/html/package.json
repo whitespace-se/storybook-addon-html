@@ -12,7 +12,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.7.5",
+    "@babel/core": "^7.8.3",
     "@storybook/addon-actions": "^5.3.4",
     "@storybook/addon-knobs": "^5.3.4",
     "@storybook/html": "^5.3.4",
