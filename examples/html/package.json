@@ -12,11 +12,11 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@storybook/addon-actions": "^5.3.4",
-    "@storybook/addon-knobs": "^5.3.4",
-    "@storybook/html": "^5.3.4",
-    "@whitespace/storybook-addon-html": "^1.2.0",
-    "babel-loader": "^8.0.6"
+    "@babel/core": "^7.9.6",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/html": "^5.3.18",
+    "@whitespace/storybook-addon-html": "^1.2.1",
+    "babel-loader": "^8.1.0"
   }
 }
