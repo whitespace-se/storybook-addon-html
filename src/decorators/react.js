@@ -1,16 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { Component } from 'react';
 import { addons, makeDecorator } from '@storybook/addons';
 import { EVENT_CODE_RECEIVED } from '../shared';
 import { parameters } from '.';
 
-const Wrapper = ({ setCode, children }) => {
-  let wrapperRef = React.createRef();
-  useEffect(() => {
-    setCode(wrapperRef.current.innerHTML);
-  });
-  return <div ref={wrapperRef}>{children}</div>;
-};
-
+class Wrapper extends Component {
+  componentDidUpdate() {
+    if (this.wrapperRef) {
+      this.props.setCode(this.wrapperRef.innerHTML);
+    }
+  }
+  render() {
+    return (
+      <div
+        ref={(el) => {
+          this.wrapperRef = el;
+        }}
+      >
+        {this.props.children}
+      </div>
+    );
+  }
+}
 export const withHTML = makeDecorator({
   ...parameters,
   wrapper: (getStory, context, { options = {} }) => {
