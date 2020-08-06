@@ -26,7 +26,7 @@ const HTMLPanel = () => {
   return (
     <Fragment>
       <SyntaxHighlighter
-        language={'html'}
+        language={'xml'}
         copyable={true}
         padded={true}
         style={style}
