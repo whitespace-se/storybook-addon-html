@@ -4,16 +4,13 @@ import { EVENT_CODE_RECEIVED } from '../shared';
 import { parameters } from '.';
 
 class Wrapper extends Component {
-  componentDidUpdate() {
-    if (this.wrapperRef) {
-      this.props.setCode(this.wrapperRef.innerHTML);
-    }
-  }
   render() {
     return (
       <div
         ref={(el) => {
-          this.wrapperRef = el;
+          if (el) {
+            this.props.setCode(el.innerHTML);
+          }
         }}
       >
         {this.props.children}
