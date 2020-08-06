@@ -24,7 +24,7 @@ export const withHTML = makeDecorator({
     const channel = addons.getChannel();
     return (
       <Wrapper
-        setCode={html => {
+        setCode={(html) => {
           channel.emit(EVENT_CODE_RECEIVED, { html, options });
         }}
       >
