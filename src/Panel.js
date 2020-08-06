@@ -14,6 +14,7 @@ const HTMLPanel = () => {
     [EVENT_CODE_RECEIVED]: ({ html, options }) => {
       const { prettier = {} } = options;
       const prettierConfig = {
+        htmlWhitespaceSensitivity: 'ignore',
         ...prettier,
         // Ensure we always pick the html parser
         parser: 'html',
