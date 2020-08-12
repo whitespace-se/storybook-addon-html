@@ -9,9 +9,9 @@
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.11.1",
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-knobs": "^5.3.19",
-    "@storybook/html": "^5.3.19",
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/addon-knobs": "^6.0.16",
+    "@storybook/html": "^6.0.16",
     "@whitespace/storybook-addon-html": "*",
     "babel-loader": "^8.1.0"
   }

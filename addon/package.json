@@ -25,16 +25,16 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
-    "@storybook/react": "^5.3.19",
+    "@storybook/react": "^6.0.16",
     "babel-eslint": "^10.1.0",
     "react": "^16.13.1"
   },
   "dependencies": {
     "@babel/generator": "^7.11.0",
     "@babel/parser": "^7.11.2",
-    "@storybook/addons": "^5.3.19",
-    "@storybook/api": "^5.3.19",
-    "@storybook/components": "^5.3.19",
+    "@storybook/addons": "^6.0.16",
+    "@storybook/api": "^6.0.16",
+    "@storybook/components": "^6.0.16",
     "prettier": "^2.0.5",
     "prismjs": "^1.20.0",
     "react-syntax-highlighter": "^13.2.1"

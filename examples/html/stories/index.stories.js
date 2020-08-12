@@ -1,9 +1,8 @@
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs/html';
+import { text } from '@storybook/addon-knobs';
 
 export default {
   title: 'Demo',
-  decorators: [withKnobs],
 };
 
 export const heading = () => '<h1>Hello World</h1>';
