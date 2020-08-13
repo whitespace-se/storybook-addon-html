@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useChannel, useAddonState } from '@storybook/api';
 
 import SyntaxHighlighter from './SyntaxHighlighter';
@@ -25,16 +25,14 @@ const HTMLPanel = () => {
     },
   });
   return (
-    <Fragment>
-      <SyntaxHighlighter
-        language={'xml'}
-        copyable={true}
-        padded={true}
-        style={style}
-      >
-        {state}
-      </SyntaxHighlighter>
-    </Fragment>
+    <SyntaxHighlighter
+      language={'xml'}
+      copyable={true}
+      padded={true}
+      style={style}
+    >
+      {state}
+    </SyntaxHighlighter>
   );
 };
 
