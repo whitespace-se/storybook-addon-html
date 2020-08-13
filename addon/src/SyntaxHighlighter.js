@@ -56,13 +56,12 @@ export default class SyntaxHighlighter extends Component {
     copyable: false,
     bordered: false,
     padded: false,
-    format: true,
     className: null,
   };
 
   state = { copied: false };
 
-  onClick = e => {
+  onClick = (e) => {
     const { children } = this.props;
 
     e.preventDefault();
@@ -89,7 +88,6 @@ export default class SyntaxHighlighter extends Component {
       copyable,
       bordered,
       padded,
-      format,
       className,
       ...rest
     } = this.props;
