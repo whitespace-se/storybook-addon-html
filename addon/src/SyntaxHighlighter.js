@@ -1,25 +1,9 @@
 import React, { Component } from 'react';
 import { styled } from '@storybook/theming';
 
-import { ActionBar } from '@storybook/components/dist/ActionBar/ActionBar';
+import { ActionBar, ScrollArea } from '@storybook/components';
 
 import ReactSyntaxHighlighter from 'react-syntax-highlighter';
-
-const Wrapper = styled.div(
-  ({ theme }) => ({
-    position: 'relative',
-    overflow: 'hidden',
-    color: theme.color.defaultText,
-  }),
-  ({ theme, bordered }) =>
-    bordered
-      ? {
-          border: `1px solid ${theme.appBorderColor}`,
-          borderRadius: theme.borderRadius,
-          background: theme.background.content,
-        }
-      : {},
-);
 
 const Pre = styled.pre(({ theme, padded }) => ({
   display: 'flex !important',
@@ -56,7 +40,6 @@ export default class SyntaxHighlighter extends Component {
     copyable: false,
     bordered: false,
     padded: false,
-    className: null,
   };
 
   state = { copied: false };
@@ -88,25 +71,26 @@ export default class SyntaxHighlighter extends Component {
       copyable,
       bordered,
       padded,
-      className,
       ...rest
     } = this.props;
     const { copied } = this.state;
     return children ? (
-      <Wrapper bordered={bordered} padded={padded} className={className}>
-        <ReactSyntaxHighlighter
-          padded={padded || bordered}
-          language={language}
-          useInlineStyles={true}
-          PreTag={Pre}
-          CodeTag={Code}
-          showLineNumbers={false}
-          wrapLines={true}
-          lineProps={{ className: 'code-line' }}
-          {...rest}
-        >
-          {children.trim()}
-        </ReactSyntaxHighlighter>
+      <>
+        <ScrollArea vertical>
+          <ReactSyntaxHighlighter
+            padded={padded || bordered}
+            language={language}
+            useInlineStyles={true}
+            PreTag={Pre}
+            CodeTag={Code}
+            showLineNumbers={false}
+            wrapLines={true}
+            lineProps={{ className: 'code-line' }}
+            {...rest}
+          >
+            {children.trim()}
+          </ReactSyntaxHighlighter>
+        </ScrollArea>
         {copyable ? (
           <ActionBar
             actionItems={[
@@ -114,7 +98,7 @@ export default class SyntaxHighlighter extends Component {
             ]}
           />
         ) : null}
-      </Wrapper>
+      </>
     ) : null;
   }
 }
