@@ -1,4 +1,9 @@
-node_modules
+# Error information
 yarn-error.log
-lib
 npm-debug.log
+
+# Dependencies
+node_modules
+
+# Build Artifacts
+/addon/out

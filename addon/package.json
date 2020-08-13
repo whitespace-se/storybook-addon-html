@@ -1,0 +1,45 @@
+{
+  "name": "@whitespace/storybook-addon-html",
+  "version": "1.2.4",
+  "description": "A Storybook addon that extracts and displays compiled syntax-highlighted HTML",
+  "keywords": [
+    "addon",
+    "storybook",
+    "html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whitespace-se/storybook-addon-html.git"
+  },
+  "scripts": {
+    "build": "yarn clean && babel -d ./out ./src",
+    "build:watch": "babel --watch -d ./out ./src",
+    "clean": "rm -rf ./out",
+    "prepare": "yarn build"
+  },
+  "author": "Whitespace",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/react": "^5.3.19",
+    "babel-eslint": "^10.1.0",
+    "react": "^16.13.1"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.11.0",
+    "@babel/parser": "^7.11.2",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/api": "^5.3.19",
+    "@storybook/components": "^5.3.19",
+    "prettier": "^2.0.5",
+    "prismjs": "^1.20.0",
+    "react-syntax-highlighter": "^13.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
