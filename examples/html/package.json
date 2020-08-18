@@ -3,20 +3,16 @@
   "version": "1.0.0",
   "description": "Example of a Storybook app using @whitespace/storybook-addon-html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook"
   },
-  "keywords": [],
-  "author": "",
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/html": "^5.3.19",
-    "@whitespace/storybook-addon-html": "^1.2.4",
+    "@whitespace/storybook-addon-html": "*",
     "babel-loader": "^8.1.0"
   }
 }
