@@ -1,7 +1,16 @@
-bracketSpacing: true
-jsxBracketSameLine: false
 printWidth: 80
+tabWidth: 2
+useTabs: false
+
 semi: true
 singleQuote: true
-tabWidth: 2
+quoteProps: as-needed
+jsxSingleQuote: false
+
 trailingComma: all
+bracketSpacing: true
+jsxBracketSameLine: false
+arrowParens: always
+
+proseWrap: always
+htmlWhitespaceSensitivity: ignore

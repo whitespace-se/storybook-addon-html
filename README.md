@@ -56,7 +56,9 @@ addDecorator(
 
 ## Supported frameworks
 
-When importing the decorator, use the correct path for your framework, e.g. `@whitespace/storybook-addon-html/react` for React or `@whitespace/storybook-addon-html/html` for HTML.
+When importing the decorator, use the correct path for your framework, e.g.
+`@whitespace/storybook-addon-html/react` for React or
+`@whitespace/storybook-addon-html/html` for HTML.
 
 Right now, the addon can be used with these frameworks:
 
