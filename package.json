@@ -7,7 +7,7 @@
     ]
   },
   "scripts": {
-    "prettier": "prettier --write '**/*.{js,json,md,yml}'"
+    "format": "prettier --write '**/*.{js,json,md,yml}'"
   },
   "devDependencies": {
     "eslint": "^7.6.0",
