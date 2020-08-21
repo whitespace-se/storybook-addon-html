@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { useChannel, useAddonState } from '@storybook/api';
+import React, { useState } from 'react';
+import { useChannel } from '@storybook/api';
 
 import SyntaxHighlighter from './SyntaxHighlighter';
 import style from 'react-syntax-highlighter/dist/esm/styles/hljs/github-gist';
@@ -9,7 +9,7 @@ import prettierHtml from 'prettier/parser-html';
 import { EVENT_CODE_RECEIVED } from './shared';
 
 const HTMLPanel = () => {
-  const [state, setState] = useAddonState(EVENT_CODE_RECEIVED, '');
+  const [state, setState] = useState('');
   useChannel({
     [EVENT_CODE_RECEIVED]: ({ html, options }) => {
       const { prettier = {} } = options;
@@ -25,16 +25,14 @@ const HTMLPanel = () => {
     },
   });
   return (
-    <Fragment>
-      <SyntaxHighlighter
-        language={'xml'}
-        copyable={true}
-        padded={true}
-        style={style}
-      >
-        {state}
-      </SyntaxHighlighter>
-    </Fragment>
+    <SyntaxHighlighter
+      language={'xml'}
+      copyable={true}
+      padded={true}
+      style={style}
+    >
+      {state}
+    </SyntaxHighlighter>
   );
 };
 
