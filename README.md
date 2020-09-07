@@ -5,32 +5,45 @@ story. It uses [highlight.js](https://highlightjs.org/) for syntax highlighting.
 
 ## Getting Started
 
+With NPM:
+
 ```sh
 npm i --save-dev @whitespace/storybook-addon-html
 ```
 
+With Yarn:
+
+```sh
+yarn add -D @whitespace/storybook-addon-html
+```
+
 ### Register addon
 
-Create a file called `addons.js` inside the `.storybook` directory and add the
-following content:
-
 ```js
-// .storybook/addons.js
+// .storybook/main.js
 
-import '@whitespace/storybook-addon-html/register';
+module.exports = {
+  // ...
+  addons: [
+    '@whitespace/storybook-addon-html/register',
+    // ...
+  ],
+};
 ```
 
 ## Usage
 
-Add `withHTML` as a global decorator inside `.storybook/config.js`:
+Add `withHTML` as a global decorator inside `.storybook/preview.js`:
 
 ```js
-// .storybook/config.js
+// .storybook/preview.js
 
-import { addDecorator } from '@storybook/html';
 import { withHTML } from '@whitespace/storybook-addon-html/react';
 
-addDecorator(withHTML);
+export const decorators = [
+  // ...
+  withHTML,
+];
 ```
 
 The HTML is formatted with Prettier. You can override the Prettier config
@@ -38,12 +51,12 @@ The HTML is formatted with Prettier. You can override the Prettier config
 [Prettier API override format](https://prettier.io/docs/en/options.html):
 
 ```js
-// .storybook/config.js
+// .storybook/preview.js
 
-import { addDecorator } from '@storybook/html';
 import { withHTML } from '@whitespace/storybook-addon-html/react';
 
-addDecorator(
+export const decorators = [
+  // ...
   withHTML({
     prettier: {
       tabWidth: 4,
@@ -51,7 +64,7 @@ addDecorator(
       htmlWhitespaceSensitivity: 'strict',
     },
   }),
-);
+];
 ```
 
 ## Supported frameworks
