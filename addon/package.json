@@ -15,7 +15,8 @@
     "build": "yarn clean && babel -d ./out ./src",
     "build:watch": "babel --watch -d ./out ./src",
     "clean": "rm -rf ./out",
-    "prepare": "yarn build"
+    "prepare": "yarn build",
+    "prepublishOnly": "cp ../README.md ."
   },
   "author": "Whitespace",
   "license": "MIT",
