@@ -1,3 +1,7 @@
+## 2.0.1 (September 9, 2020)
+
+- Fix issue with react-syntax-highlighter by downgrading it from 13.x to 12.x.
+
 ## 2.0.0 (August 21, 2020)
 
 - Add support for Storybook 6
