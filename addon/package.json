@@ -28,7 +28,8 @@
     "@babel/preset-react": "^7.10.4",
     "@storybook/react": "^6.0.16",
     "babel-eslint": "^10.1.0",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "lit-html": "^1.1.2"
   },
   "dependencies": {
     "@babel/generator": "^7.11.0",
