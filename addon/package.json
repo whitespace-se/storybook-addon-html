@@ -21,23 +21,24 @@
   "author": "Whitespace",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.1",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "@storybook/react": "^6.0.16",
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@storybook/react": "^6.1.10",
     "babel-eslint": "^10.1.0",
-    "react": "^16.13.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "dependencies": {
-    "@babel/generator": "^7.11.0",
-    "@babel/parser": "^7.11.2",
-    "@storybook/addons": "^6.0.16",
-    "@storybook/api": "^6.0.16",
-    "@storybook/components": "^6.0.16",
-    "prettier": "^2.0.5",
-    "react-syntax-highlighter": "^12.0.0"
+    "@babel/generator": "^7.12.5",
+    "@babel/parser": "^7.12.7",
+    "@storybook/addons": "^6.1.10",
+    "@storybook/api": "^6.1.10",
+    "@storybook/components": "^6.1.10",
+    "prettier": "^2.2.1",
+    "react-syntax-highlighter": "^15.4.1"
   },
   "publishConfig": {
     "access": "public"
