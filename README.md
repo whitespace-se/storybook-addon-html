@@ -3,6 +3,8 @@
 This addon for Storybook adds a tab that displays the compiled HTML for each
 story. It uses [highlight.js](https://highlightjs.org/) for syntax highlighting.
 
+![Animated preview](https://raw.githubusercontent.com/whitespace-se/storybook-addon-html/master/image.gif)
+
 ## Getting Started
 
 With NPM:
