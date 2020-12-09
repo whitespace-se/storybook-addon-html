@@ -1,3 +1,7 @@
+## 3.0.0 (December 9, 2020)
+
+- Update dependencies, including new major version of React Syntax Highlighter.
+
 ## 2.0.1 (September 9, 2020)
 
 - Fix issue with react-syntax-highlighter by downgrading it from 13.x to 12.x.
