@@ -20,7 +20,7 @@ class Wrapper extends Component {
 }
 export const withHTML = makeDecorator({
   ...parameters,
-  wrapper: (getStory, context, { options = {} }) => {
+  wrapper: (storyFn, context, { options = {} }) => {
     const channel = addons.getChannel();
     return (
       <Wrapper
@@ -28,7 +28,7 @@ export const withHTML = makeDecorator({
           channel.emit(EVENT_CODE_RECEIVED, { html, options });
         }}
       >
-        {getStory()}
+        {storyFn()}
       </Wrapper>
     );
   },

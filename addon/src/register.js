@@ -4,8 +4,11 @@ import { addons, types } from '@storybook/addons';
 
 import Panel from './Panel';
 
-addons.register('ws/htmlMarkup', () => {
-  addons.add('markup/panel', {
+const ADDON_ID = 'html';
+const PANEL_ID = `${ADDON_ID}/panel`;
+
+addons.register(ADDON_ID, () => {
+  addons.add(PANEL_ID, {
     title: 'HTML',
     type: types.PANEL,
     render: ({ active, key }) => (

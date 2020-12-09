@@ -1,1 +1,1 @@
-export const EVENT_CODE_RECEIVED = 'ws/htmlReceived';
+export const EVENT_CODE_RECEIVED = 'html/htmlReceived';

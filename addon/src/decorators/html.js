@@ -5,9 +5,9 @@ import { EVENT_CODE_RECEIVED } from '../shared';
 
 export const withHTML = makeDecorator({
   ...parameters,
-  wrapper: (getStory, context, { options = {} }) => {
+  wrapper: (storyFn, context, { options = {} }) => {
     const channel = addons.getChannel();
-    const element = getStory();
+    const element = storyFn();
     let html;
     if (typeof element === 'string') {
       html = element;
