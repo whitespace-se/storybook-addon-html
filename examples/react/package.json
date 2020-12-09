@@ -9,16 +9,15 @@
   },
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.12.9",
     "@babel/preset-react": "^7.10.4",
-    "@storybook/addon-actions": "^6.0.16",
-    "@storybook/addon-knobs": "^6.0.16",
-    "@storybook/addon-links": "^6.0.16",
-    "@storybook/addon-storyshots": "^6.0.16",
-    "@storybook/addons": "^6.0.16",
-    "@storybook/react": "^6.0.16",
+    "@storybook/addon-actions": "^6.1.10",
+    "@storybook/addon-essentials": "^6.1.10",
+    "@storybook/addon-links": "^6.1.10",
+    "@storybook/addon-storyshots": "^6.1.10",
+    "@storybook/react": "^6.1.10",
     "@whitespace/storybook-addon-html": "*",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.2.2",
     "jest": "^24.0.1",
     "react-test-renderer": "^16.13.1"
   }
