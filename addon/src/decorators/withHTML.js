@@ -5,11 +5,11 @@ export const withHTML = makeDecorator({
   name: 'withHTML',
   parameterName: 'html',
   skipIfNoParametersOrOptions: false,
-  wrapper: (storyFn, context, { options = {} }) => {
+  wrapper: (storyFn, context, { parameters = {} }) => {
     setTimeout(() => {
       const channel = addons.getChannel();
       let html = document.getElementById('root').innerHTML;
-      channel.emit(EVENT_CODE_RECEIVED, { html, options });
+      channel.emit(EVENT_CODE_RECEIVED, { html, options: parameters });
     }, 0);
     return storyFn(context);
   },
