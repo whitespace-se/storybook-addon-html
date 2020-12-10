@@ -1,13 +1,13 @@
 {
   "name": "@whitespace/storybook-addon-html-example-react",
-  "version": "1.0.0",
-  "description": "Example of a Storybook app using @whitespace/storybook-addon-html",
+  "version": "0.0.0",
+  "description": "Example of a Storybook app using @whitespace/storybook-addon-html with React",
+  "private": true,
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook",
     "test": "jest"
   },
-  "private": true,
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-react": "^7.10.4",
