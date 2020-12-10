@@ -27,11 +27,11 @@
   "author": "Whitespace",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.7",
-    "@babel/preset-react": "^7.12.7",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
     "@storybook/addons": "^6.1.10",
     "@storybook/react": "^6.1.10",
     "babel-eslint": "^10.1.0",
@@ -44,12 +44,12 @@
     "react-dom": "^16.8.0 || ^17.0.0"
   },
   "dependencies": {
-    "@babel/generator": "^7.12.5",
-    "@babel/parser": "^7.12.7",
+    "@babel/generator": "^7.12.10",
+    "@babel/parser": "^7.12.10",
     "@storybook/api": "^6.1.10",
     "@storybook/components": "^6.1.10",
     "prettier": "^2.2.1",
-    "react-syntax-highlighter": "^15.4.1"
+    "react-syntax-highlighter": "^15.4.3"
   },
   "publishConfig": {
     "access": "public"
