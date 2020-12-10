@@ -27,7 +27,7 @@ yarn add -D @whitespace/storybook-addon-html
 module.exports = {
   // ...
   addons: [
-    '@whitespace/storybook-addon-html/register',
+    '@whitespace/storybook-addon-html',
     // ...
   ],
 };
@@ -35,47 +35,26 @@ module.exports = {
 
 ## Usage
 
-Add `withHTML` as a global decorator inside `.storybook/preview.js`:
-
-```js
-// .storybook/preview.js
-
-import { withHTML } from '@whitespace/storybook-addon-html/react';
-
-export const decorators = [
-  // ...
-  withHTML,
-];
-```
-
 The HTML is formatted with Prettier. You can override the Prettier config
 (except `parser` and `plugins`) by providing an object following the
-[Prettier API override format](https://prettier.io/docs/en/options.html):
+[Prettier API override format](https://prettier.io/docs/en/options.html) in the
+`html` parameter:
 
 ```js
 // .storybook/preview.js
 
-import { withHTML } from '@whitespace/storybook-addon-html/react';
-
-export const decorators = [
+export const parameters = {
   // ...
-  withHTML({
+  html: {
     prettier: {
       tabWidth: 4,
       useTabs: false,
       htmlWhitespaceSensitivity: 'strict',
     },
-  }),
-];
+  },
+};
 ```
 
 ## Supported frameworks
 
-When importing the decorator, use the correct path for your framework, e.g.
-`@whitespace/storybook-addon-html/react` for React or
-`@whitespace/storybook-addon-html/html` for HTML.
-
-Right now, the addon can be used with these frameworks:
-
-- HTML
-- React
+As of version 4.0.0 all frameworks are supported per default 🎉

@@ -1,3 +1,8 @@
+## 4.0.0 (December 10, 2020)
+
+- Add support for all frameworks 🎂
+- Add preset support 🍰
+
 ## 3.0.0 (December 9, 2020)
 
 - Update dependencies, including new major version of React Syntax Highlighter.
