@@ -1,1 +1,3 @@
-module.exports = require('./out/decorators/react');
+console.error(
+  `You should import @whitespace/storybook-addon-html now instead of @whitespace/storybook-addon-html/react.`,
+);
