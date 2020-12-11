@@ -1,3 +1,9 @@
+## 4.0.1 (December 11, 2020)
+
+- Show error message when trying to use framework-specific module, e.g.
+  `@whitespace/storybook-addon-html/react`. It should now be simply
+  `@whitespace/storybook-addon-html`.
+
 ## 4.0.0 (December 10, 2020)
 
 - Add support for all frameworks 🎂
