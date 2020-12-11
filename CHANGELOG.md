@@ -3,6 +3,12 @@
 - Add support for all frameworks 🎂
 - Add preset support 🍰
 
+### How to migrate
+
+1. Use `@whitespace/storybook-addon-html` instead of the framework-specific
+   modules like `@whitespace/storybook-addon-html/react`.
+2. Remove the decorator in .storybook/preview.js. This is handled by the preset.
+
 ## 3.0.0 (December 9, 2020)
 
 - Update dependencies, including new major version of React Syntax Highlighter.
