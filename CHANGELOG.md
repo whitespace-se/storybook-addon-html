@@ -1,3 +1,7 @@
+## 4.0.2 (December 14, 2020)
+
+- Security update for `ini` package.
+
 ## 4.0.1 (December 11, 2020)
 
 - Show error message when trying to use framework-specific module, e.g.
