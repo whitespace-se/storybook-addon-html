@@ -8,7 +8,9 @@ export const withHTML = makeDecorator({
   wrapper: (storyFn, context, { parameters = {} }) => {
     setTimeout(() => {
       const channel = addons.getChannel();
-      let html = document.getElementById('root').innerHTML;
+      const rootSelector = parameters.root || '#root';
+      const root = document.querySelector(rootSelector);
+      let html = root ? root.innerHTML : `${rootSelector} not found.`;
       channel.emit(EVENT_CODE_RECEIVED, { html, options: parameters });
     }, 0);
     return storyFn(context);
