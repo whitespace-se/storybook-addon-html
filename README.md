@@ -65,6 +65,17 @@ export const parameters = {
 };
 ```
 
+When using Web Components, the HTML will contain empty comments, i.e. `<!---->`.
+If you want to remove these, use the `removeEmptyComments` parameter:
+
+```js
+export const parameters = {
+  html: {
+    removeEmptyComments: true, // default: false
+  },
+};
+```
+
 ## Supported frameworks
 
 As of version 4.0.0 all frameworks are supported per default 🎉
