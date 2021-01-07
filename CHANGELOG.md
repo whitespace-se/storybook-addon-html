@@ -2,7 +2,10 @@
 
 ### New features
 
-- Allow root element to be overridden using the `root` parameter. See Readme.
+- Allow root element to be overridden using the `root` parameter. See Readme for
+  example.
+
+Thank you [@savgrace](https://github.com/savgrace) for contributing 👏
 
 ### Breaking changes
 
