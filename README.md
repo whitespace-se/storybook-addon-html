@@ -56,12 +56,13 @@ export const parameters = {
 ```
 
 You can override the wrapper element selector used to grab the component HTML.
+
 ```js
-    export const parameters = {
-        html: {
-            root: '#my-custom-wrapper' // default: #root
-        }
-    };
+export const parameters = {
+  html: {
+    root: '#my-custom-wrapper', // default: #root
+  },
+};
 ```
 
 ## Supported frameworks
