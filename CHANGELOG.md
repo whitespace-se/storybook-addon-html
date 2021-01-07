@@ -1,3 +1,13 @@
+## 4.1.0 (January 7, 2021)
+
+### New features
+
+- Allow root element to be overridden using the `root` parameter. See Readme.
+
+### Breaking changes
+
+N/A
+
 ## 4.0.2 (December 14, 2020)
 
 - Security update for `ini` package.
