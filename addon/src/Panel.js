@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useChannel } from '@storybook/api';
+import React, { useEffect, useState } from 'react';
+import { useChannel, useParameter } from '@storybook/api';
 
 import SyntaxHighlighter from './SyntaxHighlighter';
 import style from 'react-syntax-highlighter/dist/esm/styles/hljs/github-gist';
@@ -8,30 +8,44 @@ import prettierHtml from 'prettier/parser-html';
 
 import { EVENT_CODE_RECEIVED } from './shared';
 
+const PARAM_KEY = 'html';
+
 const HTMLPanel = () => {
-  const [state, setState] = useState('');
+  const [html, setHTML] = useState('');
+  const [code, setCode] = useState('');
+
+  const parameters = useParameter(PARAM_KEY, {});
+  const {
+    highlighter: { showLineNumbers = false, wrapLines = true } = {},
+    prettier = {},
+  } = parameters;
+
+  const prettierConfig = {
+    htmlWhitespaceSensitivity: 'ignore',
+    ...prettier,
+    // Ensure we always pick the html parser
+    parser: 'html',
+    plugins: [prettierHtml],
+  };
+
   useChannel({
-    [EVENT_CODE_RECEIVED]: ({ html, options }) => {
-      const { prettier = {} } = options;
-      const prettierConfig = {
-        htmlWhitespaceSensitivity: 'ignore',
-        ...prettier,
-        // Ensure we always pick the html parser
-        parser: 'html',
-        plugins: [prettierHtml],
-      };
-      const code = prettierFormat(html, prettierConfig);
-      setState(code);
+    [EVENT_CODE_RECEIVED]: ({ html }) => {
+      setHTML(html);
     },
   });
+  useEffect(() => {
+    setCode(prettierFormat(html, prettierConfig));
+  }, [html]);
   return (
     <SyntaxHighlighter
       language={'xml'}
       copyable={true}
       padded={true}
       style={style}
+      showLineNumbers={showLineNumbers}
+      wrapLines={wrapLines}
     >
-      {state}
+      {code}
     </SyntaxHighlighter>
   );
 };

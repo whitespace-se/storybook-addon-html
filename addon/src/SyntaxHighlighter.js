@@ -71,6 +71,8 @@ export default class SyntaxHighlighter extends Component {
       copyable,
       bordered,
       padded,
+      showLineNumbers = false,
+      wrapLines = true,
       ...rest
     } = this.props;
     const { copied } = this.state;
@@ -83,8 +85,8 @@ export default class SyntaxHighlighter extends Component {
             useInlineStyles={true}
             PreTag={Pre}
             CodeTag={Code}
-            showLineNumbers={false}
-            wrapLines={true}
+            showLineNumbers={showLineNumbers}
+            wrapLines={wrapLines}
             lineProps={{ className: 'code-line' }}
             {...rest}
           >

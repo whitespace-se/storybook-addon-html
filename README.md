@@ -76,6 +76,20 @@ export const parameters = {
 };
 ```
 
+You can override the `showLineNumbers` and `wrapLines` settings for the syntax
+highlighter by using the `highlighter` parameter:
+
+```js
+export const parameters = {
+  html: {
+    highlighter: {
+      showLineNumbers: true, // default: false
+      wrapLines: false, // default: true
+    },
+  },
+};
+```
+
 ## Supported frameworks
 
 As of version 4.0.0 all frameworks are supported per default 🎉
