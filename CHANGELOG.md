@@ -1,3 +1,14 @@
+## 4.2.0 (January 7, 2021)
+
+### New features
+
+- Add ability to show line numbers and disable line-wrapping. See Readme for
+  example.
+
+### Breaking changes
+
+N/A
+
 ## 4.1.0 (January 7, 2021)
 
 ### New features
