@@ -76,7 +76,11 @@ export default class SyntaxHighlighter extends Component {
       ...rest
     } = this.props;
     const { copied } = this.state;
-    return children ? (
+    if(!children){
+      return null
+    }
+
+    return (
       <>
         <ScrollArea vertical>
           <ReactSyntaxHighlighter
@@ -93,14 +97,13 @@ export default class SyntaxHighlighter extends Component {
             {children.trim()}
           </ReactSyntaxHighlighter>
         </ScrollArea>
-        {copyable ? (
+        { copyable && 
           <ActionBar
             actionItems={[
               { title: copied ? 'Copied' : 'Copy', onClick: this.onClick },
             ]}
-          />
-        ) : null}
+          />}
       </>
-    ) : null;
+    )
   }
 }
