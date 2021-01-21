@@ -32,22 +32,22 @@
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
-    "@storybook/addons": "^6.1.11",
-    "@storybook/react": "^6.1.11",
+    "@storybook/addons": "^6.1.14",
+    "@storybook/react": "^6.1.14",
     "babel-eslint": "^10.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "peerDependencies": {
-    "@storybook/addons": "^6.1.11",
+    "@storybook/addons": "^6.1.14",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },
   "dependencies": {
     "@babel/generator": "^7.12.11",
     "@babel/parser": "^7.12.11",
-    "@storybook/api": "^6.1.11",
-    "@storybook/components": "^6.1.11",
+    "@storybook/api": "^6.1.14",
+    "@storybook/components": "^6.1.14",
     "prettier": "^2.2.1",
     "react-syntax-highlighter": "^15.4.3"
   },
