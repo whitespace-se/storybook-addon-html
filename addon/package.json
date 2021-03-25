@@ -11,7 +11,10 @@
   "keywords": [
     "addon",
     "storybook",
-    "html"
+    "html",
+    "storybook-addon",
+    "code",
+    "popular"
   ],
   "repository": {
     "type": "git",
@@ -53,5 +56,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "storybook": {
+    "icon": "https://avatars1.githubusercontent.com/u/10450088?s=400&u=b2a95469b7d2addf63366a93a17f0bd06f9894cc&v=4",
+    "displayName": "HTML preview"
   }
 }
