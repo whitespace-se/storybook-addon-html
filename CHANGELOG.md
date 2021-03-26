@@ -1,3 +1,16 @@
+## 5.0.0 (March 26, 2021)
+
+### Bugfixes
+
+- Fixes compatibility with Storybook 6.1.21 by updating all dependencies
+  [#42](https://github.com/whitespace-se/storybook-addon-html/issues/42)
+
+### Breaking changes
+
+- All updates are minor and patch versions, but since the Storybook deps have
+  been updated to 6.1.21 it is not guaranteed that this addon will work with
+  previous versions of Storybook.
+
 ## 4.2.0 (January 7, 2021)
 
 ### New features
