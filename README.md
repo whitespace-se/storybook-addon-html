@@ -76,7 +76,7 @@ export const parameters = {
 };
 ```
 
-When using Web Components, the HTML will contain DOM rendered attributes.
+By default the HTML will contain DOM rendered attributes.
 If you want to remove these, use the `showRawHTML` parameter:
 
 ```js
