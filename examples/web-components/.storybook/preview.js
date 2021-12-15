@@ -3,5 +3,6 @@ export const parameters = {
   html: {
     root: '#root-inner',
     removeEmptyComments: true,
+    showRawHTML: true,
   },
 };
