@@ -76,6 +76,17 @@ export const parameters = {
 };
 ```
 
+When using Web Components, the HTML will contain DOM rendered attributes.
+If you want to remove these, use the `showRawHTML` parameter:
+
+```js
+export const parameters = {
+  html: {
+    showRawHTML: true, // default: false
+  },
+};
+```
+
 You can override the `showLineNumbers` and `wrapLines` settings for the syntax
 highlighter by using the `highlighter` parameter:
 
