@@ -12,7 +12,7 @@ export const withHTML = makeDecorator({
       const root = document.querySelector(rootSelector);
       let html = root ? root.innerHTML : `${rootSelector} not found.`;
       if (parameters.removeEmptyComments) {
-        html = html.replace(/<!--\s*-->/g, '');
+        html = html.replace(/<!--.*-->/g, '');
       }
       channel.emit(EVENT_CODE_RECEIVED, { html, options: parameters });
     }, 0);
