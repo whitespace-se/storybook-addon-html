@@ -28,7 +28,7 @@
     "prepublishOnly": "cp ../README.md ."
   },
   "author": "Whitespace",
-  "license": "MIT",
+  "license": "AGPL",
   "devDependencies": {
     "@babel/cli": "^7.13.10",
     "@babel/core": "^7.13.10",
