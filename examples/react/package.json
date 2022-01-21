@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Example of a Storybook app using @whitespace/storybook-addon-html with React",
   "private": true,
+  "license": "AGPL",
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook",
