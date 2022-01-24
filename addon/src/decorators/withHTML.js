@@ -8,9 +8,13 @@ export const withHTML = makeDecorator({
   wrapper: (storyFn, context, { parameters = {} }) => {
     setTimeout(() => {
       const channel = addons.getChannel();
+      const rawHTML = storyFn();
       const rootSelector = parameters.root || '#root';
       const root = document.querySelector(rootSelector);
       let html = root ? root.innerHTML : `${rootSelector} not found.`;
+      if (parameters.showRawHTML) {
+        html = rawHTML;
+      }
       if (parameters.removeEmptyComments) {
         html = html.replace(/<!--\s*-->/g, '');
       }
