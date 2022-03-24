@@ -28,7 +28,7 @@ The library source is found within `addon`; referenced sub-directories or
 commands in this section are relative to that directory.
 
 The source-code for the library can be found within the `src` sub-directory.
-Babel is used to compile the output to the adjacent `out` directory, which is
+Babel is used to compile the output to the adjacent `dist` directory, which is
 _not_ part of version control. This can be done by running
 
 ```
@@ -36,8 +36,8 @@ yarn build
 ```
 
 Additionally, files exist within the root of the library that re-export code
-from the `out` directory. This allows for nice clean imports for users of the
-library without them needing to know about the `out` directory.
+from the `dist` directory. This allows for nice clean imports for users of the
+library without them needing to know about the `dist` directory.
 
 ## Running Example Apps
 

@@ -2,9 +2,10 @@
   "name": "@whitespace/storybook-addon-html",
   "version": "5.0.0",
   "description": "A Storybook addon that extracts and displays compiled syntax-highlighted HTML",
-  "main": "out/preset.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "files": [
-    "out/**/*",
+    "dist/**/*",
     "README.md",
     "*.js"
   ],
@@ -21,9 +22,11 @@
     "url": "https://github.com/whitespace-se/storybook-addon-html.git"
   },
   "scripts": {
-    "build": "yarn clean && babel -d ./out ./src",
-    "build:watch": "babel --watch -d ./out ./src",
-    "clean": "rm -rf ./out",
+    "build": "yarn clean && concurrently \"yarn buildBabel:cjs\" \"yarn buildBabel:esm\"",
+    "build:watch": "yarn buildBabel:esm -- --watch",
+    "buildBabel:cjs": "babel ./src -d ./dist/cjs --extensions \".js,.jsx\"",
+    "buildBabel:esm": "babel ./src -d ./dist/esm --env-name esm --extensions \".js,.jsx\"",
+    "clean": "rm -rf ./dist",
     "prepare": "yarn build",
     "prepublishOnly": "cp ../README.md ."
   },
@@ -38,6 +41,7 @@
     "@storybook/addons": "^6.1.21",
     "@storybook/react": "^6.1.21",
     "babel-eslint": "^10.1.0",
+    "concurrently": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
