@@ -55,7 +55,7 @@
     "@babel/parser": "^7.13.12",
     "@storybook/api": "^6.1.21",
     "@storybook/components": "^6.1.21",
-    "prettier": "^2.2.1",
+    "prettier": "~2.5.1",
     "react-syntax-highlighter": "^15.4.3"
   },
   "publishConfig": {
