@@ -65,6 +65,16 @@ export const parameters = {
 };
 ```
 
+You can override the default timeout value to ensure the DOM is completely loaded before searching for the wrapper selector element.
+
+```js
+export const parameters = {
+  html: {
+    delay: 500, // default: 0
+  },
+};
+```
+
 When using Web Components, the HTML will contain empty comments, i.e. `<!---->`.
 If you want to remove these, use the `removeEmptyComments` parameter:
 
