@@ -15,7 +15,7 @@ export const withHTML = makeDecorator({
         html = html.replace(/<!--\s*-->/g, '');
       }
       channel.emit(EVENT_CODE_RECEIVED, { html, options: parameters });
-    }, 0);
+    }, parameters.delay || 0);
     return storyFn(context);
   },
 });
