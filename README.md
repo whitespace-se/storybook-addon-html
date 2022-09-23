@@ -65,13 +65,23 @@ export const parameters = {
 };
 ```
 
-When using Web Components, the HTML will contain empty comments, i.e. `<!---->`.
-If you want to remove these, use the `removeEmptyComments` parameter:
+When using Web Components, the HTML will contain empty comments, i.e. `<!---->`, or `<!--..lit$..-->` if using [lit-html](https://lit.dev/docs/). If you want to remove these, use the `removeComments` parameter:
 
 ```js
 export const parameters = {
   html: {
-    removeEmptyComments: true, // default: false
+    removeComments: true, // default: false
+  },
+};
+```
+
+you can also provide your own regular expression to remove specific HTML comments:
+
+```js
+export const parameters = {
+  html: {
+    // Remove only lit HTML comments, eg: `<!--?lit$117057236$-->`
+    removeComments: /<!--(.lit.*?)-->/g, 
   },
 };
 ```
