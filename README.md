@@ -7,16 +7,18 @@ story. It uses [highlight.js](https://highlightjs.org/) for syntax highlighting.
 
 ## Getting Started
 
+Install the addon and its dependencies.
+
 With NPM:
 
 ```sh
-npm i --save-dev @whitespace/storybook-addon-html
+npm i --save-dev @whitespace/storybook-addon-html prettier react-syntax-highlighter
 ```
 
 With Yarn:
 
 ```sh
-yarn add -D @whitespace/storybook-addon-html
+yarn add -D @whitespace/storybook-addon-html prettier react-syntax-highlighter
 ```
 
 ### Register addon
@@ -89,7 +91,3 @@ export const parameters = {
   },
 };
 ```
-
-## Supported frameworks
-
-As of version 4.0.0 all frameworks are supported per default 🎉

@@ -1,10 +1,6 @@
-# Error information
-yarn-error.log
-npm-debug.log
-
-# Dependencies
-node_modules
-
-# Build Artifacts
-/addon/out
-/addon/README.md
+dist/
+node_modules/
+storybook-static/
+build-storybook.log
+.DS_Store
+.env
