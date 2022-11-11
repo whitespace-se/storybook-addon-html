@@ -1,3 +1,16 @@
+# v5.0.3 (Fri Nov 11 2022)
+
+#### ⚠️ Pushed to `master`
+
+- Merge branch 'master' of github.com:whitespace-se/storybook-addon-html ([@jeanfredrik](https://github.com/jeanfredrik))
+- ci: Use same Node version everywhere ([@jeanfredrik](https://github.com/jeanfredrik))
+
+#### Authors: 1
+
+- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
+
+---
+
 # v5.0.2 (Fri Nov 11 2022)
 
 #### ⚠️ Pushed to `master`
