@@ -11,8 +11,16 @@ export const withHTML = makeDecorator({
       const rootSelector = parameters.root || "#root";
       const root = document.querySelector(rootSelector);
       let code = root ? root.innerHTML : `${rootSelector} not found.`;
-      if (parameters.removeEmptyComments) {
+      const { removeEmptyComments, removeComments } = parameters;
+      if (removeEmptyComments) {
         code = code.replace(/<!--\s*-->/g, "");
+      }
+      if (removeComments === true) {
+        code = code.replace(/<!--.*?-->/g, "");
+      } else if (removeComments instanceof RegExp) {
+        code = code.replace(/<!--(.*?)-->/g, (match, p1) =>
+          removeComments.test(p1) ? "" : match,
+        );
       }
       emit(EVENTS.CODE_UPDATE, { code, options: parameters });
     }, 0);

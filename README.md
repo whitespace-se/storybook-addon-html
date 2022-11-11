@@ -29,7 +29,7 @@ yarn add -D @whitespace/storybook-addon-html prettier react-syntax-highlighter
 module.exports = {
   // ...
   addons: [
-    '@whitespace/storybook-addon-html',
+    "@whitespace/storybook-addon-html",
     // ...
   ],
 };
@@ -51,7 +51,7 @@ export const parameters = {
     prettier: {
       tabWidth: 4,
       useTabs: false,
-      htmlWhitespaceSensitivity: 'strict',
+      htmlWhitespaceSensitivity: "strict",
     },
   },
 };
@@ -62,13 +62,26 @@ You can override the wrapper element selector used to grab the component HTML.
 ```js
 export const parameters = {
   html: {
-    root: '#my-custom-wrapper', // default: #root
+    root: "#my-custom-wrapper", // default: #root
   },
 };
 ```
 
-When using Web Components, the HTML will contain empty comments, i.e. `<!---->`.
-If you want to remove these, use the `removeEmptyComments` parameter:
+Some frameworks put comments inside the HTML. If you want to remove these you
+can use the `removeComments` parameter. Set it to `true` to remove all comments
+or set it to a regular expression that matches the content of the comments you
+want to remove.
+
+```js
+export const parameters = {
+  html: {
+    removeComments: /^\s*remove me\s*$/, // default: false
+  },
+};
+```
+
+You can also use the `removeEmptyComments` parameter to remove only empty
+comments like `<!---->` and `<!-- -->`.
 
 ```js
 export const parameters = {
