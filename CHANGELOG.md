@@ -1,3 +1,17 @@
+# v5.0.2 (Fri Nov 11 2022)
+
+#### ⚠️ Pushed to `master`
+
+- feat: Add `removeComments` option ([@jeanfredrik](https://github.com/jeanfredrik))
+- Merge branch 'master' of github.com:whitespace-se/storybook-addon-html ([@jeanfredrik](https://github.com/jeanfredrik))
+- ci: Read correct secret in release workflow ([@jeanfredrik](https://github.com/jeanfredrik))
+
+#### Authors: 1
+
+- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
+
+---
+
 # v1.2.3 (Fri Nov 11 2022)
 
 #### 🐛 Bug Fix
