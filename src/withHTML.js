@@ -11,7 +11,8 @@ export const withHTML = makeDecorator({
       const rootSelector = parameters.root || "#root";
       const root = document.querySelector(rootSelector);
       let code = root ? root.innerHTML : `${rootSelector} not found.`;
-      const { removeEmptyComments, removeComments } = parameters;
+      const { removeEmptyComments, removeComments, customReplacement } =
+        parameters;
       if (removeEmptyComments) {
         code = code.replace(/<!--\s*-->/g, "");
       }
@@ -22,11 +23,49 @@ export const withHTML = makeDecorator({
           removeComments.test(p1) ? "" : match,
         );
       }
+
+      code = customSearchAndReplace(code, customReplacement);
+
       emit(EVENTS.CODE_UPDATE, { code, options: parameters });
     }, 0);
     return storyFn(context);
   },
 });
+
+const customSearchAndReplace = (code, customReplacement) => {
+  if (!customReplacement) {
+    return code;
+  }
+  const getSearchReplaceObject = (input) => {
+    if (input instanceof RegExp) {
+      return {
+        search: input,
+        replace: "",
+      };
+    } else if (input instanceof Object) {
+      const { search, replace } = input;
+      return {
+        search:
+          search && (search instanceof RegExp || typeof search === "string")
+            ? search
+            : false,
+        replace: replace && typeof replace === "string" ? replace : "",
+      };
+    }
+  };
+
+  let customReplacementList = customReplacement || [];
+  if (!Array.isArray(customReplacementList)) {
+    customReplacementList = [customReplacement];
+  }
+  customReplacementList
+    .map((v) => getSearchReplaceObject(v))
+    .filter((v) => v.search)
+    .forEach((v) => {
+      code = code.replace(v.search, v.replace);
+    });
+  return code;
+};
 
 if (module && module.hot && module.hot.decline) {
   module.hot.decline();

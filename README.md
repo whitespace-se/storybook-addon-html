@@ -104,3 +104,50 @@ export const parameters = {
   },
 };
 ```
+
+Another way to hide unwanted code is to define the `customReplacement` option.
+You can provide:
+- a single search (string or RegEx) that will be replaced by an empty string
+- an object containing `search` and `replace` properties
+- an array containing one or more of the options aforementioned
+
+```js
+// Providing a RegExp
+export const parameters = {
+  html: {
+    customReplacement: /ng-reflect.*?="[\S\s]*?"/g,
+  },
+};
+```
+
+```js
+// Providing an object
+export const parameters = {
+  html: {
+    customReplacement: {
+      search: /ng-reflect.*?="[\S\s]*?"/g,
+      replace: "",
+    },
+  },
+};
+```
+
+```js
+// Providing an array
+export const parameters = {
+  html: {
+    customReplacement: [
+      {
+        search: /_nghost.*?="[\S\s]*?"/g,
+        replace: "",
+      },
+      {
+        search: "foo",
+        replace: "bar",
+      },
+      /ng-reflect.*?="[\S\s]*?"/g,
+      "ng-",
+    ],
+  },
+};
+```
