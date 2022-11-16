@@ -16,9 +16,9 @@ export const withHTML = makeDecorator({
         code = code.replace(/<!--\s*-->/g, "");
       }
       if (removeComments === true) {
-        code = code.replace(/<!--.*?-->/g, "");
+        code = code.replace(/<!--[\S\s]*?-->/g, "");
       } else if (removeComments instanceof RegExp) {
-        code = code.replace(/<!--(.*?)-->/g, (match, p1) =>
+        code = code.replace(/<!--([\S\s]*?)-->/g, (match, p1) =>
           removeComments.test(p1) ? "" : match,
         );
       }
