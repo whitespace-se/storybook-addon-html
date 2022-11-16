@@ -104,3 +104,16 @@ export const parameters = {
   },
 };
 ```
+
+Another way of hiding unwanted code is to define the `transform` option. It
+allows you to perform any change to the output code, e.g. removing attributes
+injected by frameworks.
+
+```js
+html: {
+  transform: (code) => {
+    // Remove attributes `_nghost` and `ng-reflect` injected by Angular:
+    return code.replace(/(?:_nghost|ng-reflect).*?="[\S\s]*?"/g, "");
+  };
+}
+```
