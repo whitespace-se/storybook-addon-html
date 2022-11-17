@@ -11,7 +11,7 @@ export const withHTML = makeDecorator({
       const rootSelector = parameters.root || "#root";
       const root = document.querySelector(rootSelector);
       let code = root ? root.innerHTML : `${rootSelector} not found.`;
-      const { removeEmptyComments, removeComments } = parameters;
+      const { removeEmptyComments, removeComments, transform } = parameters;
       if (removeEmptyComments) {
         code = code.replace(/<!--\s*-->/g, "");
       }
@@ -21,6 +21,13 @@ export const withHTML = makeDecorator({
         code = code.replace(/<!--([\S\s]*?)-->/g, (match, p1) =>
           removeComments.test(p1) ? "" : match,
         );
+      }
+      if (typeof transform === "function") {
+        try {
+          code = transform(code);
+        } catch (e) {
+          console.error(e);
+        }
       }
       emit(EVENTS.CODE_UPDATE, { code, options: parameters });
     }, 0);
