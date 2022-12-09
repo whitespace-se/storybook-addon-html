@@ -1,5 +1,3 @@
 {
-  "plugins": [
-    "conventional-commits"
-  ]
+  "plugins": []
 }

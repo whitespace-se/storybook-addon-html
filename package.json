@@ -46,7 +46,6 @@
     "lint": "eslint '**/*.{js,jsx}'"
   },
   "devDependencies": {
-    "@auto-it/conventional-commits": "^10.37.6",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
