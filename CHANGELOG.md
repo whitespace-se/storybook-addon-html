@@ -1,3 +1,49 @@
+# v5.1.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- Fix release workflow [#88](https://github.com/whitespace-se/storybook-addon-html/pull/88) ([@jeanfredrik](https://github.com/jeanfredrik))
+- Add transform option for custom manipulation (fix release) [#87](https://github.com/whitespace-se/storybook-addon-html/pull/87) ([@jeanfredrik](https://github.com/jeanfredrik))
+
+#### 🐛 Bug Fix
+
+- feat: Add transform option for custom manipulation [#83](https://github.com/whitespace-se/storybook-addon-html/pull/83) (matias.thomsen@syzygy.de)
+- Match multiline comments with removeComments option [#82](https://github.com/whitespace-se/storybook-addon-html/pull/82) (matias.thomsen@syzygy.de)
+
+#### ⚠️ Pushed to `main`
+
+- ci: Fix workflow ([@jeanfredrik](https://github.com/jeanfredrik))
+- ci: Remove autoit/conventional-commits ([@jeanfredrik](https://github.com/jeanfredrik))
+- ci: Use Node.js 16 ([@jeanfredrik](https://github.com/jeanfredrik))
+- ci: Fix release workflow ([@jeanfredrik](https://github.com/jeanfredrik))
+- Revert "ci: Remove autoit/conventional-commits" ([@jeanfredrik](https://github.com/jeanfredrik))
+- ci: Only release from main branch ([@jeanfredrik](https://github.com/jeanfredrik))
+- ci: Remove formatting workflow ([@jeanfredrik](https://github.com/jeanfredrik))
+- style: format all files ([@jeanfredrik](https://github.com/jeanfredrik))
+- Merge branch 'master' of github.com:whitespace-se/storybook-addon-html ([@jeanfredrik](https://github.com/jeanfredrik))
+- ci: Add @auto-it/conventional-commits ([@jeanfredrik](https://github.com/jeanfredrik))
+
+#### 🔩 Dependency Updates
+
+- build(deps): bump express from 4.17.1 to 4.18.2 [#86](https://github.com/whitespace-se/storybook-addon-html/pull/86) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump decode-uri-component from 0.2.0 to 0.2.2 [#85](https://github.com/whitespace-se/storybook-addon-html/pull/85) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump minimatch from 3.0.4 to 3.1.2 [#77](https://github.com/whitespace-se/storybook-addon-html/pull/77) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump minimist from 1.2.5 to 1.2.7 [#79](https://github.com/whitespace-se/storybook-addon-html/pull/79) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump hosted-git-info from 2.8.8 to 2.8.9 [#49](https://github.com/whitespace-se/storybook-addon-html/pull/49) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump tmpl from 1.0.4 to 1.0.5 [#56](https://github.com/whitespace-se/storybook-addon-html/pull/56) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump loader-utils from 1.4.0 to 1.4.2 [#74](https://github.com/whitespace-se/storybook-addon-html/pull/74) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump terser from 4.8.0 to 4.8.1 [#75](https://github.com/whitespace-se/storybook-addon-html/pull/75) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump postcss from 7.0.35 to 7.0.39 [#76](https://github.com/whitespace-se/storybook-addon-html/pull/76) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- build(deps): bump tar from 6.1.0 to 6.1.12 [#78](https://github.com/whitespace-se/storybook-addon-html/pull/78) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 3
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
+- Matias Thomsen ([@goofy-code](https://github.com/goofy-code))
+
+---
+
 # v5.0.3 (Fri Nov 11 2022)
 
 #### ⚠️ Pushed to `master`
