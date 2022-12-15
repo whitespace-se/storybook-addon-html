@@ -1,3 +1,15 @@
+# v5.1.1 (Thu Dec 15 2022)
+
+#### 🐛 Bug Fix
+
+- fix: Outdated peer dep [#89](https://github.com/whitespace-se/storybook-addon-html/pull/89) ([@jeanfredrik](https://github.com/jeanfredrik))
+
+#### Authors: 1
+
+- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
+
+---
+
 # v5.1.0 (Fri Dec 09 2022)
 
 #### 🚀 Enhancement
