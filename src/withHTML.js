@@ -8,7 +8,7 @@ export const withHTML = makeDecorator({
   wrapper: (storyFn, context, { parameters = {} }) => {
     const emit = useChannel({});
     setTimeout(() => {
-      const rootSelector = parameters.root || "#root";
+      const rootSelector = parameters.root || "#storybook-root";
       const root = document.querySelector(rootSelector);
       let code = root ? root.innerHTML : `${rootSelector} not found.`;
       const { removeEmptyComments, removeComments, transform } = parameters;
