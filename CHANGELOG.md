@@ -1,337 +1,117 @@
-# v5.1.1 (Thu Dec 15 2022)
+### [5.1.3](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.2...v5.1.3) (2023-03-10)
 
-#### 🐛 Bug Fix
+### [5.1.2](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.1...v5.1.2) (2023-03-10)
 
-- fix: Outdated peer dep [#89](https://github.com/whitespace-se/storybook-addon-html/pull/89) ([@jeanfredrik](https://github.com/jeanfredrik))
 
-#### Authors: 1
+### Bug Fixes
 
-- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
+* Replace removed hljs theme ([d7204aa](https://github.com/whitespace-se/storybook-addon-html/commit/d7204aa57f66e102ea19719786c29a7115d97a8e))
 
----
+### [5.1.1](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.0...v5.1.1) (2022-12-15)
 
-# v5.1.0 (Fri Dec 09 2022)
 
-#### 🚀 Enhancement
+### Bug Fixes
 
-- Fix release workflow [#88](https://github.com/whitespace-se/storybook-addon-html/pull/88) ([@jeanfredrik](https://github.com/jeanfredrik))
-- Add transform option for custom manipulation (fix release) [#87](https://github.com/whitespace-se/storybook-addon-html/pull/87) ([@jeanfredrik](https://github.com/jeanfredrik))
+* Outdated peer dep ([81e74f6](https://github.com/whitespace-se/storybook-addon-html/commit/81e74f658b8e60e691a6631061960fc130a187d0))
 
-#### 🐛 Bug Fix
+## [5.1.0](https://github.com/whitespace-se/storybook-addon-html/compare/v5.0.3...v5.1.0) (2022-12-09)
 
-- feat: Add transform option for custom manipulation [#83](https://github.com/whitespace-se/storybook-addon-html/pull/83) (matias.thomsen@syzygy.de)
-- Match multiline comments with removeComments option [#82](https://github.com/whitespace-se/storybook-addon-html/pull/82) (matias.thomsen@syzygy.de)
 
-#### ⚠️ Pushed to `main`
+### Features
 
-- ci: Fix workflow ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: Remove autoit/conventional-commits ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: Use Node.js 16 ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: Fix release workflow ([@jeanfredrik](https://github.com/jeanfredrik))
-- Revert "ci: Remove autoit/conventional-commits" ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: Only release from main branch ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: Remove formatting workflow ([@jeanfredrik](https://github.com/jeanfredrik))
-- style: format all files ([@jeanfredrik](https://github.com/jeanfredrik))
-- Merge branch 'master' of github.com:whitespace-se/storybook-addon-html ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: Add @auto-it/conventional-commits ([@jeanfredrik](https://github.com/jeanfredrik))
+* Add transform option for custom manipulation ([e7a35b8](https://github.com/whitespace-se/storybook-addon-html/commit/e7a35b87e9afc8d377460ee131c9501a14810b97))
 
-#### 🔩 Dependency Updates
-
-- build(deps): bump express from 4.17.1 to 4.18.2 [#86](https://github.com/whitespace-se/storybook-addon-html/pull/86) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump decode-uri-component from 0.2.0 to 0.2.2 [#85](https://github.com/whitespace-se/storybook-addon-html/pull/85) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump minimatch from 3.0.4 to 3.1.2 [#77](https://github.com/whitespace-se/storybook-addon-html/pull/77) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump minimist from 1.2.5 to 1.2.7 [#79](https://github.com/whitespace-se/storybook-addon-html/pull/79) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump hosted-git-info from 2.8.8 to 2.8.9 [#49](https://github.com/whitespace-se/storybook-addon-html/pull/49) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump tmpl from 1.0.4 to 1.0.5 [#56](https://github.com/whitespace-se/storybook-addon-html/pull/56) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump loader-utils from 1.4.0 to 1.4.2 [#74](https://github.com/whitespace-se/storybook-addon-html/pull/74) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump terser from 4.8.0 to 4.8.1 [#75](https://github.com/whitespace-se/storybook-addon-html/pull/75) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump postcss from 7.0.35 to 7.0.39 [#76](https://github.com/whitespace-se/storybook-addon-html/pull/76) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump tar from 6.1.0 to 6.1.12 [#78](https://github.com/whitespace-se/storybook-addon-html/pull/78) ([@dependabot[bot]](https://github.com/dependabot[bot]))
-
-#### Authors: 3
-
-- [@dependabot[bot]](https://github.com/dependabot[bot])
-- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
-- Matias Thomsen ([@goofy-code](https://github.com/goofy-code))
-
----
-
-# v5.0.3 (Fri Nov 11 2022)
-
-#### ⚠️ Pushed to `master`
-
-- Merge branch 'master' of github.com:whitespace-se/storybook-addon-html
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: Use same Node version everywhere
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-
-#### Authors: 1
-
-- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
-
----
-
-# v5.0.2 (Fri Nov 11 2022)
-
-#### ⚠️ Pushed to `master`
-
-- feat: Add `removeComments` option
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- Merge branch 'master' of github.com:whitespace-se/storybook-addon-html
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: Read correct secret in release workflow
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-
-#### Authors: 1
-
-- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
-
----
-
-# v1.2.3 (Fri Nov 11 2022)
-
-#### 🐛 Bug Fix
-
-- Update Storybook addon metadata
-  [#44](https://github.com/whitespace-se/storybook-addon-html/pull/44)
-  ([@coderkevin](https://github.com/coderkevin))
-- Unnecessary Ternary operator removed
-  [#40](https://github.com/whitespace-se/storybook-addon-html/pull/40)
-  ([@rajanlagah](https://github.com/rajanlagah))
-- allow root element selector to be overridden
-  [#37](https://github.com/whitespace-se/storybook-addon-html/pull/37)
-  ([@puglisij](https://github.com/puglisij)
-  [@savgrace](https://github.com/savgrace))
-- chore(deps): upgrade to support Storybook 6
-  [#25](https://github.com/whitespace-se/storybook-addon-html/pull/25)
-  ([@alexlafroscia](https://github.com/alexlafroscia))
-- chore: use yarn workspaces for example apps
-  [#26](https://github.com/whitespace-se/storybook-addon-html/pull/26)
-  ([@alexlafroscia](https://github.com/alexlafroscia))
-- ⬆️ Update dependencies ([@jeanfredrik](https://github.com/jeanfredrik))
-
-#### ⚠️ Pushed to `master`
-
-- refactor!: Complete rewrite based on the official addon kit structure
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- Add files via upload ([@pbrotherton](https://github.com/pbrotherton))
-- Update package.json ([@pbrotherton](https://github.com/pbrotherton))
-- Delete LICENSE ([@pbrotherton](https://github.com/pbrotherton))
-- chore(release): publish new version
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(deps): update all deps ([@jeanfredrik](https://github.com/jeanfredrik))
-- style: format all files ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(deps): update all dependencies
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- feat: allow overriding `showLineNumbers` and `wrapLines` for the highlighter
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs(changelog): add credit ([@jeanfredrik](https://github.com/jeanfredrik))
-- feat: allow empty comments to be removed
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: format css files ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci: add github action that formats all files
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs(examples): add web components example app
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(release): publish version 4.0.2
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(release): publish version 4.0.1
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs(changelog): add info on migrating to version 4
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- fix: show error message when trying to import framework-specific module
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs: update images ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(release): publish version 4.0.0
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- fix: re-add support for options via parameters
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(deps): update lock file ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs(examples): add vue example app
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs(examples): update html example app
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- style: format files ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(examples/react): update package info
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- fix(examples/react): simplify Whitespace logo
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- fix: assign peer deps ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore: use files field instead om npmignore file
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- feat!: add preset and support for att frameworks
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs: add screenshot ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(release): bump version ([@jeanfredrik](https://github.com/jeanfredrik))
-- refactor: update code to match official tutorial
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- deps: update lock file ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs(examples/react): recreate with latest sb cli
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- deps: update all deps ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs: add animated preview to readme
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs: add gif for readme ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs: update changelog ([@jeanfredrik](https://github.com/jeanfredrik))
-- build: bump version to 2.0.1 ([@jeanfredrik](https://github.com/jeanfredrik))
-- build(npm): ensure that readme file is published
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- deps: downgrade react-syntax-highlighter
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs: update readme and examples for storybook 6
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- docs: Add changelog ([@jeanfredrik](https://github.com/jeanfredrik))
-- chore(style): Update Prettier config and reformat files
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- build(release): Bump version to 2.0.0
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- ci(format): Rename and fix `format` script
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- 🎨 Format code ([@jeanfredrik](https://github.com/jeanfredrik))
-- ⬆️ Update example dependencies
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- 🔖 Bump version to 1.2.4 ([@jeanfredrik](https://github.com/jeanfredrik))
-- 🐛 Fix missing output ([@jeanfredrik](https://github.com/jeanfredrik))
-- 🔖 Bump version to 1.2.3 ([@jeanfredrik](https://github.com/jeanfredrik))
-- 📝 Add Storyshots to React example
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- 🐛 Fix warning about wrong usage of hooks
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-- ✨ Ignore HTML whitespace sensitivity on format
-  ([@jeanfredrik](https://github.com/jeanfredrik))
-
-#### 🔩 Dependency Updates
-
-- build(deps): bump ssri from 6.0.1 to 6.0.2
-  [#47](https://github.com/whitespace-se/storybook-addon-html/pull/47)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump elliptic from 6.5.3 to 6.5.4
-  [#43](https://github.com/whitespace-se/storybook-addon-html/pull/43)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump node-notifier from 8.0.0 to 8.0.1
-  [#33](https://github.com/whitespace-se/storybook-addon-html/pull/33)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump ini from 1.3.5 to 1.3.8
-  [#32](https://github.com/whitespace-se/storybook-addon-html/pull/32)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- build(deps): bump node-fetch from 2.6.0 to 2.6.1
-  [#29](https://github.com/whitespace-se/storybook-addon-html/pull/29)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump elliptic from 6.5.2 to 6.5.3 in /examples/react
-  [#20](https://github.com/whitespace-se/storybook-addon-html/pull/20)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump elliptic from 6.5.2 to 6.5.3
-  [#19](https://github.com/whitespace-se/storybook-addon-html/pull/19)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump elliptic from 6.5.2 to 6.5.3 in /examples/html
-  [#18](https://github.com/whitespace-se/storybook-addon-html/pull/18)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump lodash from 4.17.15 to 4.17.19
-  [#16](https://github.com/whitespace-se/storybook-addon-html/pull/16)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump lodash from 4.17.15 to 4.17.19 in /examples/html
-  [#15](https://github.com/whitespace-se/storybook-addon-html/pull/15)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump lodash from 4.17.15 to 4.17.19 in /examples/react
-  [#14](https://github.com/whitespace-se/storybook-addon-html/pull/14)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump websocket-extensions from 0.1.3 to 0.1.4 in /examples/react
-  [#13](https://github.com/whitespace-se/storybook-addon-html/pull/13)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump websocket-extensions from 0.1.3 to 0.1.4 in /examples/html
-  [#12](https://github.com/whitespace-se/storybook-addon-html/pull/12)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-- Bump websocket-extensions from 0.1.3 to 0.1.4
-  [#11](https://github.com/whitespace-se/storybook-addon-html/pull/11)
-  ([@dependabot[bot]](https://github.com/dependabot[bot]))
-
-#### Authors: 8
-
-- [@dependabot[bot]](https://github.com/dependabot[bot])
-- [@pbrotherton](https://github.com/pbrotherton)
-- [@puglisij](https://github.com/puglisij)
-- [@savgrace](https://github.com/savgrace)
-- Alex LaFroscia ([@alexlafroscia](https://github.com/alexlafroscia))
-- Fredrik Johansson ([@jeanfredrik](https://github.com/jeanfredrik))
-- Kevin Killingsworth ([@coderkevin](https://github.com/coderkevin))
-- Rajan lagah ([@rajanlagah](https://github.com/rajanlagah))
-
----
-
-## 5.0.0 (March 26, 2021)
-
-### Bugfixes
-
-- Fixes compatibility with Storybook 6.1.21 by updating all dependencies
-  [#42](https://github.com/whitespace-se/storybook-addon-html/issues/42)
-
-### Breaking changes
-
-- All updates are minor and patch versions, but since the Storybook deps have
-  been updated to 6.1.21 it is not guaranteed that this addon will work with
-  previous versions of Storybook.
-
-## 4.2.0 (January 7, 2021)
-
-### New features
-
-- Add ability to show line numbers and disable line-wrapping. See Readme for
-  example.
-
-### Breaking changes
-
-N/A
-
-## 4.1.0 (January 7, 2021)
-
-### New features
-
-- Allow root element to be overridden using the `root` parameter. See Readme for
-  example.
-
-Thank you [@savgrace](https://github.com/savgrace) for contributing 👏
-
-### Breaking changes
-
-N/A
-
-## 4.0.2 (December 14, 2020)
-
-- Security update for `ini` package.
-
-## 4.0.1 (December 11, 2020)
-
-- Show error message when trying to use framework-specific module, e.g.
-  `@whitespace/storybook-addon-html/react`. It should now be simply
-  `@whitespace/storybook-addon-html`.
-
-## 4.0.0 (December 10, 2020)
-
-- Add support for all frameworks 🎂
-- Add preset support 🍰
-
-### How to migrate
-
-1. Use `@whitespace/storybook-addon-html` instead of the framework-specific
-   modules like `@whitespace/storybook-addon-html/react`.
-2. Remove the decorator in .storybook/preview.js. This is handled by the preset.
-
-## 3.0.0 (December 9, 2020)
-
-- Update dependencies, including new major version of React Syntax Highlighter.
-
-## 2.0.1 (September 9, 2020)
-
-- Fix issue with react-syntax-highlighter by downgrading it from 13.x to 12.x.
-
-## 2.0.0 (August 21, 2020)
-
-- Add support for Storybook 6
-- Restructure repository structure and add Yarn workspaces
-- Fix: Pin “Copy” button to bottom of panel
-- Fix: Ensure code is shown on first render
-
-**Note: Previous versions of Storybook are no longer compatible with this addon.
-Stay on 1.x if you’re still using Storybook 5.**
-
-Thank you [@alexlafroscia](https://github.com/alexlafroscia) for contributing 🎉
+
+### Bug Fixes
+
+* Match multiline comments ([c23952b](https://github.com/whitespace-se/storybook-addon-html/commit/c23952b75f0e471fd5c50d1a94a5540a9c6c7ad2))
+
+
+### Reverts
+
+* Revert "ci: Remove autoit/conventional-commits" ([74628b2](https://github.com/whitespace-se/storybook-addon-html/commit/74628b2b3be2abe3bce0d7137e63a9ca1aea87a6))
+
+### [5.0.3](https://github.com/whitespace-se/storybook-addon-html/compare/v5.0.2...v5.0.3) (2022-11-11)
+
+### [5.0.2](https://github.com/whitespace-se/storybook-addon-html/compare/v5.0.1...v5.0.2) (2022-11-11)
+
+
+### Features
+
+* Add `removeComments` option ([5b4a6e6](https://github.com/whitespace-se/storybook-addon-html/commit/5b4a6e6cef0c53b528903eefd3bebd23963e4aa1)), closes [#73](https://github.com/whitespace-se/storybook-addon-html/issues/73) [#64](https://github.com/whitespace-se/storybook-addon-html/issues/64)
+
+### [5.0.1](https://github.com/whitespace-se/storybook-addon-html/compare/v5.0.0...v5.0.1) (2022-11-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Complete rewrite based on the official addon kit structure
+
+### Code Refactoring
+
+* Complete rewrite based on the official addon kit structure ([836d4b9](https://github.com/whitespace-se/storybook-addon-html/commit/836d4b97bdbe52a321210e7d612c53b4f3c0c771))
+
+## [5.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v4.2.0...v5.0.0) (2021-03-26)
+
+## [4.2.0](https://github.com/whitespace-se/storybook-addon-html/compare/v4.1.0...v4.2.0) (2021-01-07)
+
+
+### Features
+
+* allow empty comments to be removed ([5cf46c0](https://github.com/whitespace-se/storybook-addon-html/commit/5cf46c0a1ff31ae4cf4e5b9a000436368e8df77c))
+* allow overriding `showLineNumbers` and `wrapLines` for the highlighter ([121ffb6](https://github.com/whitespace-se/storybook-addon-html/commit/121ffb6260f5f1567d612a8f616d300dec53ed66)), closes [#21](https://github.com/whitespace-se/storybook-addon-html/issues/21)
+
+## [4.1.0](https://github.com/whitespace-se/storybook-addon-html/compare/v4.0.2...v4.1.0) (2021-01-07)
+
+### [4.0.2](https://github.com/whitespace-se/storybook-addon-html/compare/v4.0.1...v4.0.2) (2020-12-14)
+
+### [4.0.1](https://github.com/whitespace-se/storybook-addon-html/compare/v4.0.0...v4.0.1) (2020-12-11)
+
+
+### Bug Fixes
+
+* show error message when trying to import framework-specific module ([1ef9e1b](https://github.com/whitespace-se/storybook-addon-html/commit/1ef9e1b68f7757558de8d25e47b50dcc8a96b5d7)), closes [#31](https://github.com/whitespace-se/storybook-addon-html/issues/31)
+
+## [4.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v3.0.0...v4.0.0) (2020-12-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* add preset and support for att frameworks
+
+### Features
+
+* add preset and support for att frameworks ([51a33c8](https://github.com/whitespace-se/storybook-addon-html/commit/51a33c8b23870dd47ac899b98fb92427329ab971))
+
+
+### Bug Fixes
+
+* assign peer deps ([ae0dabc](https://github.com/whitespace-se/storybook-addon-html/commit/ae0dabc8f316612a9dfa4fe50062667b90643416))
+* **examples/react:** simplify Whitespace logo ([4884b04](https://github.com/whitespace-se/storybook-addon-html/commit/4884b0490c081104d896db7e7afdcf92fe893ffb))
+* re-add support for options via parameters ([ed19b93](https://github.com/whitespace-se/storybook-addon-html/commit/ed19b93ec6c7f3776e5e16866c7a87694d6ec758))
+
+## [3.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v2.0.1...v3.0.0) (2020-12-09)
+
+### [2.0.1](https://github.com/whitespace-se/storybook-addon-html/compare/v2.0.0...v2.0.1) (2020-09-09)
+
+## [2.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v1.2.2...v2.0.0) (2020-08-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** Minimum supported Storybook version is now 6.X.X
+
+### Bug Fixes
+
+* ensure code is shown on first render ([0f033b8](https://github.com/whitespace-se/storybook-addon-html/commit/0f033b8c77178d18e700cd5f105b1fa336a65d51))
+* pin “Copy” button to bottom of panel ([ed0c7d4](https://github.com/whitespace-se/storybook-addon-html/commit/ed0c7d43b236427fb66995256972a31807a98d7b))
+
+
+### Miscellaneous Chores
+
+* **deps:** upgrade to support Storybook 6 ([2b049c9](https://github.com/whitespace-se/storybook-addon-html/commit/2b049c9de87216cedd399876a7bcb38770ef9e40))
+
+### [1.2.2](https://github.com/whitespace-se/storybook-addon-html/compare/v1.2.0...v1.2.2) (2020-05-09)
+
+## 1.2.0 (2020-01-07)
+
