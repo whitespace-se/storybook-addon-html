@@ -1,7 +1,8 @@
 import React from "react";
 
 import SyntaxHighlighter from "./SyntaxHighlighter";
-import style from "react-syntax-highlighter/dist/esm/styles/hljs/github-gist";
+import style from "react-syntax-highlighter/dist/esm/styles/hljs/github";
+
 /**
  * Checkout https://github.com/storybookjs/storybook/blob/next/code/addons/jest/src/components/Panel.tsx
  * for a real world example
