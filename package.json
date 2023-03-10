@@ -1,6 +1,6 @@
 {
   "name": "@whitespace/storybook-addon-html",
-  "version": "5.1.2",
+  "version": "5.1.3",
   "description": "A Storybook addon that extracts and displays compiled syntax-highlighted HTML",
   "keywords": [
     "storybook-addon",
