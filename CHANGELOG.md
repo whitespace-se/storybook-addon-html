@@ -1,3 +1,10 @@
+### [5.1.4](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.3...v5.1.4) (2023-03-13)
+
+
+### Bug Fixes
+
+* Incompatibility with Storybook 7.0 ([4751ec7](https://github.com/whitespace-se/storybook-addon-html/commit/4751ec73ff55cd9fb7a7a4e452ae8524e42797be))
+
 ### [5.1.3](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.2...v5.1.3) (2023-03-10)
 
 ### [5.1.2](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.1...v5.1.2) (2023-03-10)
