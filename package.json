@@ -53,6 +53,7 @@
     "@babel/preset-typescript": "^7.21.5",
     "@storybook/addon-essentials": "^7.0.12",
     "@storybook/react": "^7.0.12",
+    "@types/node": "^16.0.0",
     "auto": "^10.37.6",
     "babel-loader": "^9.1.2",
     "boxen": "^5.1.2",
