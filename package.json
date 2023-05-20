@@ -1,7 +1,7 @@
 {
-  "name": "@whitespace/storybook-addon-html",
-  "version": "5.1.4",
-  "description": "A Storybook addon that extracts and displays compiled syntax-highlighted HTML",
+  "name": "@no-name/storybook-addon-html",
+  "version": "0.0.1",
+  "description": "A Storybook addon that extracts and displays compiled syntax-highlighted HTML for non framework development.",
   "keywords": [
     "storybook-addon",
     "html",
@@ -11,9 +11,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/whitespace-se/storybook-addon-html"
+    "url": "https://github.com/andy4577/storybook-addon-html"
   },
-  "author": "Whitespace <code@whitespace.se>",
+  "author": "Andriy Petrushchak",
   "license": "AGPL-3.0-or-later",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

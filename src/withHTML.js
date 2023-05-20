@@ -8,9 +8,14 @@ export const withHTML = makeDecorator({
   wrapper: (storyFn, context, { parameters = {} }) => {
     const emit = useChannel({});
     setTimeout(() => {
-      const rootSelector = parameters.root || "#storybook-root, #root";
-      const root = document.querySelector(rootSelector);
-      let code = root ? root.innerHTML : `${rootSelector} not found.`;
+      let code;
+      if (context.parameters.framework === 'html') {
+        code = storyFn(context);
+      } else {
+        const rootSelector = parameters.root || "#storybook-root, #root";
+        const root = document.querySelector(rootSelector);
+        code = root ? root.innerHTML : `${rootSelector} not found.`;
+      }
       const { removeEmptyComments, removeComments, transform } = parameters;
       if (removeEmptyComments) {
         code = code.replace(/<!--\s*-->/g, "");
