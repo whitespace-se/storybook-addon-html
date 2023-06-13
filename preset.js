@@ -7,7 +7,7 @@ function managerEntries(entry = []) {
 }
 
 function previewAnnotations(entry = []) {
-  return [...entry, require.resolve("./dist/esm/preset/manager")];
+  return [...entry, require.resolve("./dist/esm/preset/preview")];
 }
 
 module.exports = {
