@@ -1,6 +1,21 @@
-dist/
-node_modules/
-storybook-static/
-build-storybook.log
+# ide
+.vscode
+.idea
+.iml
+
+# file system
 .DS_Store
-.env
+
+# dependencies
+node_modules/
+.npm
+
+# logs
+*.log
+
+# local env files
+.env*.local
+
+# build
+dist/
+storybook-static/
