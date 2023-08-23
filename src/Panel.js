@@ -1,10 +1,10 @@
-import React, { useMemo } from "react";
-import { useAddonState, useChannel, useParameter } from "@storybook/api";
+import React, { useState, useEffect } from "react";
+import { useAddonState, useChannel, useParameter } from "@storybook/manager-api";
 import { AddonPanel } from "@storybook/components";
 import { ADDON_ID, EVENTS, PARAM_KEY } from "./constants";
 import { PanelContent } from "./components/PanelContent";
 import { format as prettierFormat } from "prettier/standalone";
-import prettierHtml from "prettier/parser-html";
+import * as prettierHtml from "prettier/plugins/html";
 
 export const Panel = (props) => {
   // https://storybook.js.org/docs/react/addons/addons-api#useaddonstate
@@ -32,8 +32,15 @@ export const Panel = (props) => {
     plugins: [prettierHtml],
   };
 
-  const formattedCode = useMemo(
-    () => code && prettierFormat(code, prettierConfig),
+  const [formattedCode, setFormattedCode] = useState(null);
+  useEffect(
+    () => {
+      const formatCode = async () => {
+        const prettierFormattedCode = code && await prettierFormat(code, prettierConfig);
+        setFormattedCode(prettierFormattedCode);
+      }
+      formatCode().catch(e => console.error(e));
+    },
     [code, prettierConfig],
   );
 
