@@ -13,11 +13,27 @@
     "type": "git",
     "url": "https://github.com/whitespace-se/storybook-addon-html"
   },
+  "type": "module",
   "author": "Whitespace <code@whitespace.se>",
   "license": "AGPL-3.0-or-later",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/ts/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./preview": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/preview.js",
+      "require": "./dist/preview.cjs"
+    },
+    "./preset": "./dist/preset.cjs",
+    "./manager": "./dist/manager.js",
+    "./package.json": "./package.json"
+  },
   "files": [
     "dist/**/*",
     "README.md",
@@ -25,75 +41,79 @@
     "*.d.ts"
   ],
   "scripts": {
-    "clean": "rimraf ./dist",
-    "buildBabel": "concurrently \"yarn buildBabel:cjs\" \"yarn buildBabel:esm\"",
-    "buildBabel:cjs": "babel ./src -d ./dist/cjs --extensions \".js,.jsx,.ts,.tsx\"",
-    "buildBabel:esm": "babel ./src -d ./dist/esm --env-name esm --extensions \".js,.jsx,.ts,.tsx\"",
-    "buildTsc": "tsc --declaration --emitDeclarationOnly --outDir ./dist/ts",
-    "prebuild": "yarn clean",
-    "build": "concurrently \"yarn buildBabel\" \"yarn buildTsc\"",
-    "build:watch": "concurrently \"yarn buildBabel:esm -- --watch\" \"yarn buildTsc -- --watch\"",
+    "build": "tsup",
+    "build:watch": "npm run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "start": "concurrently \"yarn build:watch\" \"yarn storybook -- --no-manager-cache --quiet\"",
-    "build-storybook": "build-storybook",
-    "prerelease": "zx scripts/prepublish-checks.mjs",
-    "release": "yarn build && auto shipit",
-    "eject-ts": "zx scripts/eject-typescript.mjs",
+    "start": "run-p build:watch 'storybook --quiet'",
+    "prerelease": "zx scripts/prepublish-checks.js",
+    "release": "npm run build && auto shipit",
+    "eject-ts": "zx scripts/eject-typescript.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "format": "run-s format:*",
     "format:eslint": "eslint --fix '**/*.{js,jsx}' || true",
     "format:prettier": "prettier --write '**/*.{js,jsx,json,md,mdx,yml,html,css}'",
     "lint": "eslint '**/*.{js,jsx}'"
   },
   "devDependencies": {
-    "@babel/cli": "^7.21.5",
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
-    "@babel/preset-react": "^7.18.6",
-    "@babel/preset-typescript": "^7.21.5",
-    "@storybook/addon-essentials": "^7.0.12",
-    "@storybook/react": "^7.0.12",
-    "@types/node": "^16.0.0",
-    "auto": "^10.37.6",
-    "babel-loader": "^9.1.2",
-    "boxen": "^5.1.2",
-    "concurrently": "^6.5.1",
-    "dedent": "^0.7.0",
-    "eslint": "^8.29.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.31.11",
+    "@storybook/addon-essentials": "8.0.0",
+    "@storybook/addon-interactions": "8.0.0",
+    "@storybook/addon-links": "8.0.0",
+    "@storybook/blocks": "8.0.0",
+    "@storybook/components": "8.0.0",
+    "@storybook/core-events": "8.0.0",
+    "@storybook/manager": "8.0.0",
+    "@storybook/manager-api": "8.0.0",
+    "@storybook/preview": "8.0.0",
+    "@storybook/preview-api": "8.0.0",
+    "@storybook/react": "8.0.0",
+    "@storybook/react-vite": "8.0.0",
+    "@storybook/test": "8.0.0",
+    "@storybook/theming": "8.0.0",
+    "@storybook/types": "8.0.0",
+    "@types/node": "^18.15.0",
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.21",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "@vitejs/plugin-react": "^4.2.1",
+    "auto": "^11.1.1",
+    "boxen": "^7.1.1",
+    "dedent": "^1.5.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.34.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.1",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-syntax-highlighter": "^15.5.0",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.9.4",
-    "webpack": "^5.83.1",
-    "zx": "^1.15.2"
+    "prettier": "^3.0.0",
+    "prompts": "^2.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^15.0.0",
+    "storybook": "8.0.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6",
+    "zx": "^7.2.3"
   },
   "peerDependencies": {
-    "@storybook/addons": "^6.5.8 || ^7.0.12",
-    "@storybook/api": "^6.5.8 || ^7.0.12",
-    "@storybook/components": "^6.5.8 || ^7.0.12",
-    "@storybook/core-events": "^6.5.8 || ^7.0.12",
-    "@storybook/theming": "^6.5.8 || ^7.0.12",
-    "prettier": "^2.0.0",
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "prettier": "^3.0.0",
     "react-syntax-highlighter": "^15.0.0"
-  },
-  "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    },
-    "react-dom": {
-      "optional": true
-    }
   },
   "publishConfig": {
     "access": "public"
+  },
+  "bundler": {
+    "exportEntries": [
+      "src/index.ts"
+    ],
+    "managerEntries": [
+      "src/manager.ts"
+    ],
+    "previewEntries": [
+      "src/preview.ts"
+    ],
+    "nodeEntries": [
+      "src/preset.ts"
+    ]
   },
   "storybook": {
     "displayName": "HTML Preview",
@@ -109,6 +129,5 @@
       "react-native"
     ],
     "icon": "https://avatars1.githubusercontent.com/u/10450088?s=400&u=b2a95469b7d2addf63366a93a17f0bd06f9894cc&v=4"
-  },
-  "dependencies": {}
+  }
 }
