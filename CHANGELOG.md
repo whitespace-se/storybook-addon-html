@@ -1,4 +1,13 @@
-### [5.1.6](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.4...v5.1.6) (2023-06-13)
+## [6.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.4...v6.0.0) (2024-03-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Rewrite in Typescript with support for Storybook 8 and Prettier 3 based on latest addon kit
+
+### Code Refactoring
+
+* Rewrite in Typescript with support for Storybook 8 and Prettier 3 based on latest addon kit ([4963646](https://github.com/whitespace-se/storybook-addon-html/commit/4963646a1b08eeb19cda90c36d036c11921060c0))
 
 ### [5.1.4](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.3...v5.1.4) (2023-03-13)
 
