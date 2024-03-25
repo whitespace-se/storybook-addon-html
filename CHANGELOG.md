@@ -1,4 +1,11 @@
-### [6.0.1](https://github.com/whitespace-se/storybook-addon-html/compare/6.0.0...6.0.1) (2024-03-25)
+### [6.0.2](https://github.com/whitespace-se/storybook-addon-html/compare/v6.0.1...v6.0.2) (2024-03-25)
+
+
+### Bug Fixes
+
+* Remove reference to preset ([f7997e8](https://github.com/whitespace-se/storybook-addon-html/commit/f7997e82f10aec49a5e716584c0c03cd44a0ddbe))
+
+### [6.0.1](https://github.com/whitespace-se/storybook-addon-html/compare/6.0.0...v6.0.1) (2024-03-25)
 
 ## [6.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.4...6.0.0) (2024-03-25)
 
