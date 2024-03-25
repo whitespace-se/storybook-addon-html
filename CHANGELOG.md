@@ -1,4 +1,6 @@
-## [6.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.4...v6.0.0) (2024-03-25)
+### [6.0.1](https://github.com/whitespace-se/storybook-addon-html/compare/6.0.0...6.0.1) (2024-03-25)
+
+## [6.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v5.1.4...6.0.0) (2024-03-25)
 
 
 ### ⚠ BREAKING CHANGES
