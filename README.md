@@ -5,6 +5,11 @@ story. It uses [highlight.js](https://highlightjs.org/) for syntax highlighting.
 
 ![Animated preview](https://raw.githubusercontent.com/whitespace-se/storybook-addon-html/master/image.gif)
 
+## Requirements
+
+Version 6 of this addon requires Storybook 8 and Prettier 3. If you are still
+using Storybook 7, you can use version 5.
+
 ## Getting Started
 
 Install the addon and its dependencies.
