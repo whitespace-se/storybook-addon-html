@@ -12,11 +12,6 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
-    html: {
-      highlighter: { showLineNumbers: true },
-      prettier: {},
-      transform: (code: string) => "hej",
-    },
   },
 };
 
