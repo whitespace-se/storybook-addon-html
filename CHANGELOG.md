@@ -1,3 +1,10 @@
+### [6.0.3](https://github.com/whitespace-se/storybook-addon-html/compare/v6.0.2...v6.0.3) (2024-04-02)
+
+
+### Bug Fixes
+
+* Replace all instances of "my addon" ([693c60e](https://github.com/whitespace-se/storybook-addon-html/commit/693c60eb28c802c330d0c184aa3fd53c0a4295d5))
+
 ### [6.0.2](https://github.com/whitespace-se/storybook-addon-html/compare/v6.0.1...v6.0.2) (2024-03-25)
 
 
