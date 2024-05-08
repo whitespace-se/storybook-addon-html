@@ -122,3 +122,12 @@ html: {
   };
 }
 ```
+
+You can disable the HTML panel by setting the `disable` parameter to true.
+This will hide and disable the HTML addon in your stories.
+
+```js
+html: {
+  disable: true, // default: false
+}
+```
