@@ -1,3 +1,10 @@
+## [6.1.0](https://github.com/whitespace-se/storybook-addon-html/compare/v6.0.5...v6.1.0) (2024-05-07)
+
+
+### Features
+
+* add `paramKey` property to panel object. ([#120](https://github.com/whitespace-se/storybook-addon-html/issues/120)) ([1506cad](https://github.com/whitespace-se/storybook-addon-html/commit/1506cad8482a03959e585c7cd8dbe86c4dd16fde))
+
 ### [6.0.5](https://github.com/whitespace-se/storybook-addon-html/compare/v6.0.4...v6.0.5) (2024-04-11)
 
 
