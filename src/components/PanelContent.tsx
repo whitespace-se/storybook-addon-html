@@ -14,7 +14,7 @@ export const PanelContent: React.FC<PanelContentProps> = ({
   wrapLines = false,
 }) => (
   <SyntaxHighlighter
-    language={"html"}
+    language={"xml"}
     copyable={true}
     padded={true}
     style={style}

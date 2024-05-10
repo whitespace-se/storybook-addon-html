@@ -7,7 +7,9 @@ import {
   SyntaxHighlighterProps,
 } from "@storybook/components";
 
-import ReactSyntaxHighlighter from "react-syntax-highlighter";
+import ReactSyntaxHighlighter, {
+  SyntaxHighlighterProps as ReactSyntaxHighlighterProps,
+} from "react-syntax-highlighter";
 
 type PreProps = {
   padded?: boolean;
@@ -54,7 +56,11 @@ export default function SyntaxHighlighter({
   wrapLines = true,
   renderer,
   ...rest
-}: SyntaxHighlighterProps & { wrapLines?: boolean; children?: string }) {
+}: Omit<SyntaxHighlighterProps, "language"> & {
+  wrapLines?: boolean;
+  children?: string;
+  language?: ReactSyntaxHighlighterProps["language"];
+}) {
   const [copied, setCopied] = useState(false);
 
   const onClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
