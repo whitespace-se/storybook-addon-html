@@ -1,3 +1,10 @@
+### [6.1.1](https://github.com/whitespace-se/storybook-addon-html/compare/v6.1.0...v6.1.1) (2024-05-11)
+
+
+### Bug Fixes
+
+* update syntax-highlighter language option and correct type reference ([#126](https://github.com/whitespace-se/storybook-addon-html/issues/126)) ([a653292](https://github.com/whitespace-se/storybook-addon-html/commit/a653292b8bac979d51ca7b48c956b6fe783b9b4f))
+
 ## [6.1.0](https://github.com/whitespace-se/storybook-addon-html/compare/v6.0.5...v6.1.0) (2024-05-07)
 
 
