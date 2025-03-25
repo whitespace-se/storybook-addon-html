@@ -42,25 +42,7 @@ module.exports = {
 
 ## Usage
 
-The HTML is formatted with Prettier. You can override the Prettier config
-(except `parser` and `plugins`) by providing an object following the
-[Prettier API override format](https://prettier.io/docs/en/options.html) in the
-`html` parameter:
-
-```js
-// .storybook/preview.js
-
-export const parameters = {
-  // ...
-  html: {
-    prettier: {
-      tabWidth: 4,
-      useTabs: false,
-      htmlWhitespaceSensitivity: "strict",
-    },
-  },
-};
-```
+The HTML is formatted with Prettier.
 
 You can override the wrapper element selector used to grab the component HTML.
 

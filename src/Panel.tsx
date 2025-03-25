@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   useAddonState,
   useChannel,
@@ -7,9 +7,6 @@ import {
 import { AddonPanel } from "@storybook/components";
 import { ADDON_ID, EVENTS, PARAM_KEY } from "./constants";
 import { PanelContent } from "./components/PanelContent";
-import { format as prettierFormat } from "prettier/standalone";
-import * as prettierHtml from "prettier/plugins/html";
-import { Options as PrettierOption } from "prettier";
 
 interface PanelProps {
   active: boolean;
@@ -30,35 +27,15 @@ export const Panel: React.FC<PanelProps> = (props) => {
 
   const parameters = useParameter(PARAM_KEY, {
     highlighter: { showLineNumbers: false, wrapLines: true },
-    prettier: {},
   });
   const {
     highlighter: { showLineNumbers = false, wrapLines = true } = {},
-    prettier = {},
   } = parameters;
-
-  const prettierConfig: PrettierOption = {
-    htmlWhitespaceSensitivity: "ignore",
-    ...prettier,
-    // Ensure we always pick the html parser
-    parser: "html",
-    plugins: [prettierHtml],
-  };
-
-  const [formattedCode, setFormattedCode] = useState(null);
-  useEffect(() => {
-    const formatCode = async () => {
-      const prettierFormattedCode =
-        code && (await prettierFormat(code, prettierConfig));
-      setFormattedCode(prettierFormattedCode);
-    };
-    formatCode().catch((e) => console.error(e));
-  }, [code, prettierConfig]);
 
   return (
     <AddonPanel {...props}>
       <PanelContent
-        code={formattedCode}
+        code={code}
         showLineNumbers={showLineNumbers}
         wrapLines={wrapLines}
       />

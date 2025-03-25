@@ -1,6 +1,5 @@
 import React from "react";
-import style from "react-syntax-highlighter/dist/esm/styles/hljs/github";
-import SyntaxHighlighter from "./SyntaxHighlighter";
+import { SyntaxHighlighter } from "@storybook/components"
 
 interface PanelContentProps {
   code: string;
@@ -14,12 +13,12 @@ export const PanelContent: React.FC<PanelContentProps> = ({
   wrapLines = false,
 }) => (
   <SyntaxHighlighter
-    language={"xml"}
+    language={"html"}
     copyable={true}
     padded={true}
-    style={style}
     showLineNumbers={showLineNumbers}
-    wrapLines={wrapLines}
+    wrapLongLines={wrapLines}
+    format={"html"}
   >
     {code}
   </SyntaxHighlighter>
