@@ -3,8 +3,8 @@ import {
   useAddonState,
   useChannel,
   useParameter,
-} from "@storybook/manager-api";
-import { AddonPanel } from "@storybook/components";
+} from "storybook/internal/manager-api";
+import { AddonPanel } from "storybook/internal/components";
 import { ADDON_ID, EVENTS, PARAM_KEY } from "./constants";
 import { PanelContent } from "./components/PanelContent";
 

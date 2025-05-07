@@ -1,5 +1,5 @@
 import React from "react";
-import { SyntaxHighlighter } from "@storybook/components"
+import { SyntaxHighlighter } from "storybook/internal/components"
 
 interface PanelContentProps {
   code: string;

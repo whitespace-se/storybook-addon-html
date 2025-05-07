@@ -2,9 +2,9 @@
 
 import boxen from "boxen";
 import dedent from "dedent";
-import { readFile } from "fs/promises";
-import { globalPackages as globalManagerPackages } from "@storybook/manager/globals";
-import { globalPackages as globalPreviewPackages } from "@storybook/preview/globals";
+import { readFile } from "node:fs/promises";
+import { globalPackages as globalManagerPackages } from "storybook/internal/manager/globals";
+import { globalPackages as globalPreviewPackages } from "storybook/internal/preview/globals";
 
 const packageJson = await readFile("./package.json", "utf8").then(JSON.parse);
 

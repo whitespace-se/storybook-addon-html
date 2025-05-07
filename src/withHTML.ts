@@ -1,8 +1,8 @@
-import { useChannel } from "@storybook/preview-api";
+import { useChannel } from "storybook/internal/preview-api";
 import type {
   Renderer,
   PartialStoryFn as StoryFunction,
-} from "@storybook/types";
+} from "storybook/internal/types";
 import { EVENTS } from "./constants";
 import { Parameters } from "./types";
 

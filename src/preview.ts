@@ -1,4 +1,4 @@
-import type { Renderer, ProjectAnnotations } from "@storybook/types";
+import type { ProjectAnnotations, Renderer } from "storybook/internal/types";
 import { withHTML } from "./withHTML";
 
 const preview: ProjectAnnotations<Renderer> = {
