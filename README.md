@@ -1,7 +1,7 @@
 # Storybook Addon HTML
 
 This addon for Storybook adds a tab that displays the compiled HTML for each
-story. It uses [highlight.js](https://highlightjs.org/) for syntax highlighting.
+story.
 
 ![Animated preview](https://raw.githubusercontent.com/whitespace-se/storybook-addon-html/master/image.gif)
 
@@ -10,6 +10,10 @@ story. It uses [highlight.js](https://highlightjs.org/) for syntax highlighting.
 Version 6 of this addon requires Storybook 8 and Prettier 3. If you are still
 using Storybook 7, you can use version 5.
 
+As of version 7 of this addon, the `react-syntax-highlighter` dependency is no
+longer required. The addon will use the default syntax highlighter of Storybook,
+which also formats the code with Prettier.
+
 ## Getting Started
 
 Install the addon and its dependencies.
@@ -17,13 +21,19 @@ Install the addon and its dependencies.
 With NPM:
 
 ```sh
-npm i --save-dev @whitespace/storybook-addon-html prettier react-syntax-highlighter
+npm i --save-dev @whitespace/storybook-addon-html
 ```
 
 With Yarn:
 
 ```sh
-yarn add -D @whitespace/storybook-addon-html prettier react-syntax-highlighter
+yarn add -D @whitespace/storybook-addon-html
+```
+
+With PNPM:
+
+```sh
+pnpm add -D @whitespace/storybook-addon-html
 ```
 
 ### Register addon
@@ -41,8 +51,6 @@ module.exports = {
 ```
 
 ## Usage
-
-The HTML is formatted with Prettier.
 
 You can override the wrapper element selector used to grab the component HTML.
 
