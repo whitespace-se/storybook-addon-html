@@ -54,16 +54,10 @@
     "format:prettier": "prettier --write '**/*.{js,jsx,json,md,mdx,yml,html,css}'",
     "lint": "eslint '**/*.{js,jsx}'"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.6.0",
-    "@storybook/addon-interactions": "^8.6.0",
-    "@storybook/addon-links": "^8.6.0",
-    "@storybook/blocks": "^8.6.0",
-    "@storybook/react": "^8.6.0",
-    "@storybook/react-vite": "^8.6.0",
-    "@storybook/test": "^8.6.0",
-    "@storybook/types": "^8.6.0",
+    "@storybook/addon-docs": "^9.0.0",
+    "@storybook/addon-links": "^9.0.0",
+    "@storybook/react-vite": "^9.0.0",
     "@types/node": "^18.15.0",
     "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.21",
@@ -79,7 +73,7 @@
     "prompts": "^2.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^8.6.0",
+    "storybook": "^9.0.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.2",
     "vite": "^5.1.6",
@@ -119,5 +113,8 @@
       "react-native"
     ],
     "icon": "https://avatars1.githubusercontent.com/u/10450088?s=400&u=b2a95469b7d2addf63366a93a17f0bd06f9894cc&v=4"
+  },
+  "overrides": {
+    "storybook": "$storybook"
   }
 }
