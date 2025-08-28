@@ -1,4 +1,15 @@
-## [7.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v6.1.1...v7.0.0) (2025-08-28)
+## [8.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v7.0.0...v8.0.0) (2025-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* Support Storybook 9
+
+### Features
+
+* Support Storybook 9 ([68f6df1](https://github.com/whitespace-se/storybook-addon-html/commit/68f6df103ee58966e0d6393e18c8928c1ae1f3bd))
+
+## [7.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v6.1.1...v7.0.0) (2025-05-07)
 
 
 ### ⚠ BREAKING CHANGES

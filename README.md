@@ -7,12 +7,13 @@ story.
 
 ## Requirements
 
-Version 6 of this addon requires Storybook 8 and Prettier 3. If you are still
-using Storybook 7, you can use version 5.
+### Storybook 9.x
 
-As of version 7 of this addon, the `react-syntax-highlighter` dependency is no
-longer required. The addon will use the default syntax highlighter of Storybook,
-which also formats the code with Prettier.
+Use version 8.x of this addon.
+
+### Storybook 8.x
+
+Use version 7.x of this addon.
 
 ## Getting Started
 
