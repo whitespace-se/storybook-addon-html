@@ -1,3 +1,14 @@
+## [7.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v6.1.1...v7.0.0) (2025-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* Refactor the code to use the syntax highlighter of Storybook (#137)
+
+### Code Refactoring
+
+* Refactor the code to use the syntax highlighter of Storybook ([#137](https://github.com/whitespace-se/storybook-addon-html/issues/137)) ([ad191ec](https://github.com/whitespace-se/storybook-addon-html/commit/ad191ec7385fea6ec7017eb30585ec7c6e47089d))
+
 ### [6.1.1](https://github.com/whitespace-se/storybook-addon-html/compare/v6.1.0...v6.1.1) (2024-05-11)
 
 
