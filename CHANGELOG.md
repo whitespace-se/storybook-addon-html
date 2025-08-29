@@ -1,3 +1,10 @@
+### [8.0.2](https://github.com/whitespace-se/storybook-addon-html/compare/v8.0.1...v8.0.2) (2025-08-29)
+
+
+### Bug Fixes
+
+* Wrong Storybook peer dep version ([70fa4cf](https://github.com/whitespace-se/storybook-addon-html/commit/70fa4cf3e8eedc9b5ce9737e0c1f6965ebc7367d))
+
 ### [8.0.1](https://github.com/whitespace-se/storybook-addon-html/compare/v8.0.0...v8.0.1) (2025-08-28)
 
 ## [8.0.0](https://github.com/whitespace-se/storybook-addon-html/compare/v7.0.0...v8.0.0) (2025-08-28)
