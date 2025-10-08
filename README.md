@@ -114,6 +114,38 @@ html: {
 }
 ```
 
+### Using Prettier to format HTML
+
+The `transform` function now supports async operations, allowing you to use
+Prettier for HTML formatting:
+
+```js
+import * as prettier from 'prettier/standalone';
+import * as prettierPluginHtml from 'prettier/plugins/html';
+
+export const parameters = {
+  html: {
+    transform: async (code) => {
+      return await prettier.format(code, {
+        parser: 'html',
+        plugins: [prettierPluginHtml],
+        tabWidth: 2,
+        printWidth: 100,
+        htmlWhitespaceSensitivity: 'ignore',
+      });
+    },
+  },
+};
+```
+
+**Note:** You need to install `prettier` in your project to use this feature:
+
+```sh
+npm install --save-dev prettier
+# or
+yarn add -D prettier
+```
+
 You can disable the HTML panel by setting the `disable` parameter to true.
 This will hide and disable the HTML addon in your stories.
 
