@@ -14,7 +14,7 @@ export const withHTML = (
 ) => {
   const emit = useChannel({});
 
-  setTimeout(() => {
+  setTimeout(async () => {
     const rootSelector = parameters.root || "#storybook-root, #root";
     const root = document.querySelector(rootSelector);
     let code: string = root ? root.innerHTML : `${rootSelector} not found.`;
@@ -31,7 +31,7 @@ export const withHTML = (
     }
     if (typeof transform === "function") {
       try {
-        code = transform(code);
+        code = await transform(code);
       } catch (e) {
         console.error(e);
       }

@@ -6,5 +6,5 @@ export type Parameters = {
   root?: string;
   removeEmptyComments?: boolean;
   removeComments?: boolean | RegExp;
-  transform?: (code: string) => string;
+  transform?: (code: string) => string | Promise<string>;
 };
