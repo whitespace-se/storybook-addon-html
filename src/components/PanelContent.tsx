@@ -1,5 +1,5 @@
-import React from "react";
-import { SyntaxHighlighter } from "storybook/internal/components"
+import React from 'react';
+import { SyntaxHighlighter } from 'storybook/internal/components';
 
 interface PanelContentProps {
   code: string;
@@ -7,18 +7,14 @@ interface PanelContentProps {
   wrapLines?: boolean;
 }
 
-export const PanelContent: React.FC<PanelContentProps> = ({
-  code,
-  showLineNumbers = false,
-  wrapLines = false,
-}) => (
+export const PanelContent: React.FC<PanelContentProps> = ({ code, showLineNumbers = false, wrapLines = false }) => (
   <SyntaxHighlighter
-    language={"html"}
+    language={'html'}
     copyable={true}
     padded={true}
     showLineNumbers={showLineNumbers}
     wrapLongLines={wrapLines}
-    format={"html"}
+    format={'html'}
   >
     {code}
   </SyntaxHighlighter>

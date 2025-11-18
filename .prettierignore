@@ -1,2 +1,4 @@
 dist
 CHANGELOG.md
+node_modules
+storybook-static

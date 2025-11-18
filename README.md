@@ -45,7 +45,7 @@ pnpm add -D @whitespace/storybook-addon-html
 module.exports = {
   // ...
   addons: [
-    "@whitespace/storybook-addon-html",
+    '@whitespace/storybook-addon-html',
     // ...
   ],
 };
@@ -58,7 +58,7 @@ You can override the wrapper element selector used to grab the component HTML.
 ```js
 export const parameters = {
   html: {
-    root: "#my-custom-wrapper", // default: #root
+    root: '#my-custom-wrapper', // default: #root
   },
 };
 ```
@@ -109,7 +109,7 @@ injected by frameworks.
 html: {
   transform: (code) => {
     // Remove attributes `_nghost` and `ng-reflect` injected by Angular:
-    return code.replace(/(?:_nghost|ng-reflect).*?="[\S\s]*?"/g, "");
+    return code.replace(/(?:_nghost|ng-reflect).*?="[\S\s]*?"/g, '');
   };
 }
 ```

@@ -1,4 +1,4 @@
-export const ADDON_ID = "storybook/html";
+export const ADDON_ID = 'storybook/html';
 export const PANEL_ID = `${ADDON_ID}/panel`;
 export const PARAM_KEY = `html`;
 
