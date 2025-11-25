@@ -7,6 +7,10 @@ story.
 
 ## Requirements
 
+### Storybook 10.x
+
+Use version 9.x of this addon.
+
 ### Storybook 9.x
 
 Use version 8.x of this addon.
