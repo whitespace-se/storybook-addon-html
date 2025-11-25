@@ -35,8 +35,8 @@ export const withHTML = (
     const prettierPluginEstree = await import('prettier/plugins/estree');
 
     code = await prettier.format(code, {
-      parser: 'babel',
-      plugins: [prettierPluginBabel, prettierPluginEstree],
+      parser: 'html',
+      plugins: [prettierPluginHtml]
     });
 
     emit(EVENTS.CODE_UPDATE, { code, options: parameters });
