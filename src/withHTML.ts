@@ -31,8 +31,7 @@ export const withHTML = (
     }
 
     const prettier = await import('prettier/standalone');
-    const prettierPluginBabel = await import('prettier/plugins/babel');
-    const prettierPluginEstree = await import('prettier/plugins/estree');
+    const prettierPluginHtml = await import('prettier/plugins/html');
 
     code = await prettier.format(code, {
       parser: 'html',
