@@ -1,4 +1,5 @@
-export type Parameters = {
+export interface Parameters {
+  disable?: boolean;
   highlighter?: {
     showLineNumbers?: boolean;
     wrapLines?: boolean;
@@ -7,4 +8,9 @@ export type Parameters = {
   removeEmptyComments?: boolean;
   removeComments?: boolean | RegExp;
   transform?: (code: string) => string;
-};
+}
+
+export interface CodeUpdatePayload {
+  code: string;
+  options: Parameters;
+}

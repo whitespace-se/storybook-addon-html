@@ -1,96 +1,90 @@
 # Storybook Addon HTML
 
-This addon for Storybook adds a tab that displays the compiled HTML for each
-story.
+This addon for Storybook adds a panel tab that displays the rendered HTML for each story.
 
 ![Animated preview](https://raw.githubusercontent.com/whitespace-se/storybook-addon-html/master/image.gif)
 
 ## Requirements
 
+### Storybook 10.x
+
+Use this version of the addon.
+
 ### Storybook 9.x
 
 Use version 8.x of this addon.
 
-### Storybook 8.x
+## Installation
 
-Use version 7.x of this addon.
-
-## Getting Started
-
-Install the addon and its dependencies.
-
-With NPM:
+Install the addon with your package manager.
 
 ```sh
 npm i --save-dev @whitespace/storybook-addon-html
-```
 
-With Yarn:
+pnpm add -D @whitespace/storybook-addon-html
 
-```sh
 yarn add -D @whitespace/storybook-addon-html
 ```
 
-With PNPM:
+## Register addon
 
-```sh
-pnpm add -D @whitespace/storybook-addon-html
-```
+```ts
+// .storybook/main.ts
+import type { StorybookConfig } from '@storybook/your-framework';
 
-### Register addon
-
-```js
-// .storybook/main.js
-
-module.exports = {
+const config: StorybookConfig = {
   // ...
-  addons: [
-    "@whitespace/storybook-addon-html",
-    // ...
-  ],
+  addons: ['@whitespace/storybook-addon-html'],
 };
+
+export default config;
 ```
 
 ## Usage
 
-You can override the wrapper element selector used to grab the component HTML.
+All options are configured under the `html` story parameter.
 
-```js
+### `root`
+
+Override the wrapper selector used to capture HTML.
+
+```ts
 export const parameters = {
   html: {
-    root: "#my-custom-wrapper", // default: #root
+    root: '#my-custom-wrapper', // default: '#storybook-root, #root'
   },
 };
 ```
 
-Some frameworks put comments inside the HTML. If you want to remove these you
-can use the `removeComments` parameter. Set it to `true` to remove all comments
-or set it to a regular expression that matches the content of the comments you
-want to remove.
+### `removeComments`
 
-```js
+Remove comments from captured HTML. Set to `true` for all comments, or pass a `RegExp` to remove matching comments only.
+
+```ts
 export const parameters = {
   html: {
-    removeComments: /^\s*remove me\s*$/, // default: false
+    removeComments: /^\s*remove me\s*$/,
   },
 };
 ```
 
-You can also use the `removeEmptyComments` parameter to remove only empty
-comments like `<!---->` and `<!-- -->`.
+### `removeEmptyComments`
 
-```js
+Remove empty comments like `<!---->` and `<!-- -->`.
+
+```ts
 export const parameters = {
   html: {
-    removeEmptyComments: true, // default: false
+    removeEmptyComments: true,
   },
 };
 ```
 
-You can override the `showLineNumbers` and `wrapLines` settings for the syntax
-highlighter by using the `highlighter` parameter:
+### `highlighter`
 
-```js
+Configure syntax highlighter rendering in the panel.
+
+```ts
 export const parameters = {
   html: {
     highlighter: {
@@ -101,24 +95,26 @@ export const parameters = {
 };
 ```
 
-Another way of hiding unwanted code is to define the `transform` option. It
-allows you to perform any change to the output code, e.g. removing attributes
-injected by frameworks.
+### `transform`
 
-```js
-html: {
-  transform: (code) => {
-    // Remove attributes `_nghost` and `ng-reflect` injected by Angular:
-    return code.replace(/(?:_nghost|ng-reflect).*?="[\S\s]*?"/g, "");
-  };
-}
+Transform output HTML before rendering.
+
+```ts
+export const parameters = {
+  html: {
+    transform: (code: string) => code.replace(/(?:_nghost|ng-reflect).*?="[\S\s]*?"/g, ''),
+  },
+};
 ```
 
-You can disable the HTML panel by setting the `disable` parameter to true.
-This will hide and disable the HTML addon in your stories.
+### `disable`
 
-```js
-html: {
-  disable: true, // default: false
-}
+Hide/disable the panel for a story.
+
+```ts
+export const parameters = {
+  html: {
+    disable: true,
+  },
+};
 ```
