@@ -2,7 +2,9 @@ import { useChannel, useEffect } from 'storybook/preview-api';
 import type { DecoratorFunction } from 'storybook/internal/types';
 import { format as formatWithPrettier } from 'prettier/standalone';
 import htmlPlugin from 'prettier/plugins/html';
+import cssPlugin from 'prettier/plugins/postcss';
 import { EVENTS } from './constants';
+import { extractCSS } from './css-extractor';
 import type { Parameters } from './types';
 
 const DEFAULT_ROOT_SELECTOR = '#storybook-root, #root';
@@ -60,6 +62,19 @@ async function prettifyHtml(code: string) {
   }
 }
 
+async function prettifyCss(code: string) {
+  if (!code.trim()) return '';
+  try {
+    return await formatWithPrettier(code, {
+      parser: 'css',
+      plugins: [cssPlugin],
+    });
+  } catch (error) {
+    console.error('Failed to format CSS with Prettier', error);
+    return code;
+  }
+}
+
 export const withHTML: DecoratorFunction = (storyFn, context) => {
   const emit = useChannel({});
   const parameters = (context.parameters?.html as Parameters | undefined) || {};
@@ -68,7 +83,18 @@ export const withHTML: DecoratorFunction = (storyFn, context) => {
     const timer = window.setTimeout(async () => {
       const code = getCode(context.canvasElement as ParentNode | undefined, parameters);
       const prettifiedCode = await prettifyHtml(code);
-      emit(EVENTS.CODE_UPDATE, { code: prettifiedCode, options: parameters });
+
+      let css = '';
+      if (parameters.css?.enabled) {
+        const rootSelector = parameters.root || DEFAULT_ROOT_SELECTOR;
+        const root = getRootElement(context.canvasElement as ParentNode | undefined, rootSelector);
+        if (root) {
+          const rawCss = extractCSS(root, parameters.css);
+          css = await prettifyCss(rawCss);
+        }
+      }
+
+      emit(EVENTS.CODE_UPDATE, { code: prettifiedCode, css, options: parameters });
     }, 0);
 
     return () => {
