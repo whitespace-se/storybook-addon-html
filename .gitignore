@@ -5,3 +5,6 @@ build-storybook.log
 .DS_Store
 .env
 .eslintcache
+
+.github/skills/
+.github/copilot-instructions.md

@@ -1,3 +1,14 @@
+export interface CSSParameters {
+  enabled?: boolean;
+  includeCustomProperties?: boolean;
+  includeMediaQueries?: boolean;
+  includeFontFace?: boolean;
+  includeKeyframes?: boolean;
+  includeLayerRules?: boolean;
+  scoping?: string | false;
+  transform?: (css: string) => string;
+}
+
 export interface Parameters {
   disable?: boolean;
   highlighter?: {
@@ -8,9 +19,11 @@ export interface Parameters {
   removeEmptyComments?: boolean;
   removeComments?: boolean | RegExp;
   transform?: (code: string) => string;
+  css?: CSSParameters;
 }
 
 export interface CodeUpdatePayload {
   code: string;
+  css: string;
   options: Parameters;
 }

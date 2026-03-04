@@ -8,6 +8,11 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
+    html: {
+      css: {
+        enabled: true,
+      },
+    },
   },
   initialGlobals: {
     background: { value: 'light' },
