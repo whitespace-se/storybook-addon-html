@@ -10,7 +10,19 @@ export interface Parameters {
   transform?: (code: string) => string;
 }
 
+export type SourceMode = 'code' | 'html';
+
+export type StoryArgs = Record<string, unknown>;
+
 export interface CodeUpdatePayload {
   code: string;
   options: Parameters;
+}
+
+export interface DocsSnippetPayload {
+  id: string;
+  args?: StoryArgs;
+  source?: string | null;
+  format?: boolean | 'dedent';
+  sourceMode?: SourceMode;
 }
