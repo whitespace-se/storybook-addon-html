@@ -9,7 +9,8 @@
  * https://storybook.js.org/docs/react/writing-stories/decorators
  */
 import type { ProjectAnnotations, Renderer } from 'storybook/internal/types';
-import { withHTML } from './withHTML';
+import { DOCS_SOURCE_MODE_GLOBAL } from './constants';
+import { transformDocsSource, withHTML } from './withHTML';
 
 /**
  * Note: if you want to use JSX in this file, rename it to `preview.tsx`
@@ -18,6 +19,30 @@ import { withHTML } from './withHTML';
 
 const preview: ProjectAnnotations<Renderer> = {
   decorators: [withHTML],
+  parameters: {
+    docs: {
+      source: {
+        transform: transformDocsSource,
+      },
+    },
+  },
+  initialGlobals: {
+    [DOCS_SOURCE_MODE_GLOBAL]: 'code',
+  },
+  globalTypes: {
+    [DOCS_SOURCE_MODE_GLOBAL]: {
+      name: 'Docs source',
+      description: 'Choose which source snippet Docs shows',
+      toolbar: {
+        icon: 'markup',
+        dynamicTitle: true,
+        items: [
+          { value: 'code', title: 'Code' },
+          { value: 'html', title: 'HTML' },
+        ],
+      },
+    },
+  },
 };
 
 export default preview;

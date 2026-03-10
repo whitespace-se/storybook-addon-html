@@ -1,6 +1,6 @@
 # Storybook Addon HTML
 
-This addon for Storybook adds a panel tab that displays the rendered HTML for each story.
+This addon for Storybook adds a panel tab that displays the rendered HTML for each story. It also adds a `Docs source` toggle so Docs/Autodocs can show either the normal framework source or the captured rendered HTML.
 
 ![Animated preview](https://raw.githubusercontent.com/whitespace-se/storybook-addon-html/master/image.gif)
 
